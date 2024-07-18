@@ -1111,3 +1111,14 @@ body {
 .doing-item p {
   text-align: justify;
 }
+
+.about-item {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.about-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
