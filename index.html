@@ -90,9 +90,7 @@
         </header>
         <section class="about-text about-item">
           <p>
-            Hello! I am a computer science graduate from the University of Southern California with extensive experience
-            in data science, machine learning, data engineering, and analysis. My expertise spans across diverse domains
-            such as healthcare, automobile, education, and agriculture.
+            Hello! I am a Computer Science graduate from the University of Southern California.
           </p>
           <p>
             I am passionate about leveraging data-driven solutions to solve complex problems and drive innovation. With a
@@ -142,7 +140,48 @@
             </div>
           </div>
         </section>
+
+        <section class="section domain-experience">
+          <h2 class="section-title">Domain Experience</h2>
+          <div class="domain-container-horizontal">
+              <!-- Healthcare -->
+              <div class="domain-item">
+                  <div class="domain-icon">
+                      <ion-icon name="medkit-outline"></ion-icon>
+                  </div>
+                  <h3>Healthcare</h3>
+                  <p>Experience in leveraging data for healthcare analytics and predictive modeling to improve patient outcomes.</p>
+              </div>
       
+              <!-- Automobile -->
+              <div class="domain-item">
+                  <div class="domain-icon">
+                      <ion-icon name="car-sport-outline"></ion-icon>
+                  </div>
+                  <h3>Automobile</h3>
+                  <p>Worked on projects involving vehicle data analysis, predictive maintenance, and automation techniques.</p>
+              </div>
+      
+              <!-- Education -->
+              <div class="domain-item">
+                  <div class="domain-icon">
+                      <ion-icon name="school-outline"></ion-icon>
+                  </div>
+                  <h3>Education</h3>
+                  <p>Developed educational tools and analytics platforms to enhance learning experiences and outcomes.</p>
+              </div>
+      
+              <!-- Agriculture -->
+              <div class="domain-item">
+                  <div class="domain-icon">
+                      <ion-icon name="leaf-outline"></ion-icon>
+                  </div>
+                  <h3>Agriculture</h3>
+                  <p>Implemented data-driven solutions for crop prediction, soil health analysis, and precision farming.</p>
+              </div>
+          </div>
+        </section> 
+
         <section class="skills about-item">
           <header>
             <h2 class="h2 article-title">Skills</h2>
@@ -268,15 +307,17 @@
                 <span class="timeline-date">Apr 2023 — Present</span>
               </div>
               <div class="timeline-subheader">
-                <p class="timeline-text">Data Analyst Intern</p>
+                <p class="timeline-text">Data Science & Analytics Intern</p>
               </div>
-              <p class="timeline-description">
-                Led the conversion of QlikSense dashboards to Tableau, significantly boosting analytics and data
-                processing speed. Implemented an email subscription system for healthcare workers via Tableau, enhancing
-                communication. Enhanced ICU predictive analytics using NLP for care escalation forecasts. Validated data
-                ingestion in HEa and AWS Redshift databases, ensuring high dashboard accuracy and reducing discrepancies.
-                Processed and analyzed extensive patient records to build ML models predicting LOS and mortality rates.
-              </p>
+              <ul class="timeline-description">
+                <li>> Led the conversion of three QlikSense dashboards to Tableau, significantly boosting analytics and data processing speed</li>
+                <li>> Implemented and automated an email subscription system via Tableau, providing regular performance reports to healthcare providers and enhancing communication</li>
+                <li>> Enhanced ICU predictive analytics using NLP for care escalation forecasts</li>
+                <li>> Validated data ingestion across platforms (HEa, AWS Redshift, Snowflake) using SQL, ensuring high dashboard accuracy and reducing discrepancies</li>
+                <li>> Processed and analyzed extensive patient records to build ML models predicting Length of Stay (LOS) and mortality rates</li>
+                <li>> Created one-pagers for dashboards and documentation for new orients on the department's Data Portal</li>
+                <li>> Presented these initiatives to the Executive Leadership Team, showcasing improvements in data accuracy, processing speed, and operational efficiency</li>
+            </ul>            
             </li>
             <li class="timeline-item">
               <div class="timeline-header">
@@ -287,11 +328,12 @@
               <div class="timeline-subheader">
                 <p class="timeline-text">Data Engineer</p>
               </div>
-              <p class="timeline-description">
-                Optimized ETL and data analysis processes using PySpark and SQL, significantly improving efficiency.
-                Developed an ML pipeline with high classification accuracy. Conducted signal processing training for
-                professionals. Developed an ML pipeline for generating industry-aligned university syllabi.
-              </p>
+              <ul class="timeline-description">
+                <li>> Optimized the existing ETL by performing data analysis, using PySpark and SQL, significantly improving efficiency and time</li>
+                <li>> Developed an ML pipeline with high classification accuracy for patent classification, automating the patent classification process</li>
+                <li>> Conducted a signal processing session for professionals, discussing how signal processing in ML can be applied in the automotive domain and addressing its nuances</li>
+                <li>> Participated in mini projects, such as predicting the employee number for a particular day to minimize food wastage</li>
+            </ul>
             </li>
             <li class="timeline-item">
               <div class="timeline-header">
@@ -301,29 +343,11 @@
               <div class="timeline-subheader">
                 <p class="timeline-text">Machine Learning Research Intern</p>
               </div>
-              <p class="timeline-description">
-                Devised an innovative ML pipeline for industry-aligned university syllabi generation using web-scraped job
-                descriptions, significantly improving relevancy. Analyzed numerous universities, aligning syllabi with
-                market trends to ensure graduates meet industry demands. Constructed an integrated ML and Deep Learning
-                course with projects and internships, substantially raising job opportunities.
-              </p>
-            </li>
-            <li class="timeline-item">
-              <div class="timeline-header">
-                <h4 class="h4 timeline-item-title">Smart Sampark Pvt. Ltd. (Belagavi, India)</h4>
-                <span class="timeline-date">Aug 2021 — Jun 2022</span>
-              </div>
-              <div class="timeline-subheader">
-                <p class="timeline-text">Machine Learning Research Intern</p>
-              </div>
-              <p class="timeline-description">
-                Piloted an extensive Deep Learning model study, evaluating multiple models, and revolutionized an
-                agricultural chatbot with advanced insights. Corroborated the Seq2Seq Deep Learning model's potential
-                through meticulous testing, achieving a high success rate. Pioneered state-of-the-art Transformer
-                architectures, reducing response time and boosting NLU. Constructed a granular dataset with a million data
-                points for localized agricultural insights. Integrated UX design principles to enhance user interaction
-                with the agricultural chatbot.
-              </p>
+              <ul class="timeline-description">
+                <li>> Devised an innovative ML pipeline for industry-aligned university syllabi generation using web-scraped job descriptions, significantly improving relevancy</li>
+                <li>> Analyzed numerous universities, aligning syllabi with market trends to ensure graduates meet industry demands</li>
+                <li>> Constructed an integrated ML and Deep Learning course with projects and internships, substantially raising job opportunities</li>
+            </ul>            
             </li>
             <li class="timeline-item">
               <div class="timeline-header">
@@ -333,12 +357,28 @@
               <div class="timeline-subheader">
                 <p class="timeline-text">Machine Learning Research Intern</p>
               </div>
-              <p class="timeline-description">
-                Spearheaded NLG research, refining conversational AI capabilities. Achieved optimal NLG module performance,
-                significantly reducing response time and increasing accuracy. Conducted exhaustive NLU literature review,
-                advancing AI comprehension. Empowered conversational AI with diverse datasets, effectively handling
-                grammatical complexities.
-              </p>
+              <ul class="timeline-description">
+                <li>> Spearheaded NLG research, refining conversational AI capabilities</li>
+                <li>> Achieved optimal NLG module performance, significantly reducing response time and increasing accuracy</li>
+                <li>> Conducted exhaustive NLU literature review, advancing AI comprehension</li>
+                <li>> Empowered conversational AI with diverse datasets, effectively handling grammatical complexities</li>
+            </ul>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-header">
+                <h4 class="h4 timeline-item-title">Smart Sampark Pvt. Ltd. (Belagavi, India)</h4>
+                <span class="timeline-date">Aug 2021 — Mar 2022</span>
+              </div>
+              <div class="timeline-subheader">
+                <p class="timeline-text">Machine Learning Research Intern</p>
+              </div>
+              <ul class="timeline-description">
+                <li>> Piloted an extensive Deep Learning model study, evaluating multiple models, and revolutionized an agricultural chatbot with advanced insights</li>
+                <li>> Corroborated the Seq2Seq Deep Learning model's potential through meticulous testing, achieving a high success rate</li>
+                <li>> Pioneered state-of-the-art Transformer architectures, reducing response time and boosting NLU</li>
+                <li>> Constructed a granular dataset with a million data points for localized agricultural insights</li>
+                <li>> Integrated UX design principles to enhance user interaction with the agricultural chatbot</li>
+            </ul>            
             </li>
           </ol>
         </section>

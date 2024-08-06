@@ -1122,3 +1122,116 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+.domain-experience {
+  margin-top: 20px;
+}
+
+.domain-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.domain-item {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(50% - 20px); /* Adjusting the width of the cards */
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.domain-item:hover {
+  transform: translateY(-5px);
+}
+
+.domain-icon {
+  color: #f3c623;
+  font-size: 40px; /* Increase icon size */
+  margin-bottom: 10px;
+}
+
+.domain-item h3 {
+  color: #f3c623;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.domain-item p {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.domain-item {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.domain-item.expanded {
+  background-color: #333;
+  padding: 30px;
+  transform: scale(1.05);
+}
+
+.domain-container-horizontal {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 20px 0;
+  gap: 20px;
+}
+
+.domain-item {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  display: inline-block;
+  min-width: 250px; /* Adjust as needed */
+  white-space: normal;
+}
+
+.domain-item:hover {
+  transform: translateY(-5px);
+}
+
+.domain-icon {
+  color: #f3c623;
+  font-size: 40px; /* Increase icon size */
+  margin-bottom: 10px;
+}
+
+.domain-item h3 {
+  color: #f3c623;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.domain-item p {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Invisible scrollbar with hover effect */
+.domain-container-horizontal::-webkit-scrollbar {
+  height: 12px;
+}
+
+.domain-container-horizontal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.domain-container-horizontal::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.domain-container-horizontal:hover::-webkit-scrollbar-thumb {
+  background-color: #f3c623;
+}
+
