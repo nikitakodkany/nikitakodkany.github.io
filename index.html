@@ -464,12 +464,12 @@
                 <p>This project develops a deep learning framework to estimate potential engagement metrics such as likes, comments, and retweets for new tweets, leveraging data from social media platforms like Twitter and Reddit.</p>
                 <h5>The tools and techniques used for this project are the following:</h5>
                 <ul class="tools-list">
-                    <li>> **Data Collection**: Collect data from Twitter and Reddit using their respective APIs.</li>
-                    <li>> **Pre-processing**: Use techniques like sentiment analysis, topic classification, and content embeddings to extract relevant features.</li>
-                    <li>> **Modeling**: Use transformer-based neural networks to predict future engagement metrics.</li>
-                    <li>> **Languages**: Python for scripting and data processing.</li>
-                    <li>> **Frameworks**: TensorFlow, PyTorch for building and training the models.</li>
-                    <li>> **Tools**: Jupyter Notebook for experimentation and visualization, Pandas for data manipulation, Scikit-learn for additional data processing and model evaluation.</li>
+                    <li>> Data Collection: Collect data from Twitter and Reddit using their respective APIs.</li>
+                    <li>> Pre-processing: Use techniques like sentiment analysis, topic classification, and content embeddings to extract relevant features.</li>
+                    <li>> Modeling: Use transformer-based neural networks to predict future engagement metrics.</li>
+                    <li>> Languages: Python for scripting and data processing.</li>
+                    <li>> Frameworks: TensorFlow, PyTorch for building and training the models.</li>
+                    <li>> Tools: Jupyter Notebook for experimentation and visualization, Pandas for data manipulation, Scikit-learn for additional data processing and model evaluation.</li>
                 </ul>
                 <h5>Project's Architecture</h5>
                 <img src="./assets/images/dunes/pipeline.png" alt="Project's Architecture" class="project-image" data-fade>
@@ -482,16 +482,18 @@
                     <li>> Validate the model using various performance metrics.</li>
                     <li>> Predict engagement metrics such as likes, comments, and retweets for new tweets.</li>
                 </ul>
-                <h5>Output</h5>
+                <h5>Results and Conclusion</h5>
+                <h6>Model Performance</h6>
                 <p>The model demonstrated high accuracy in predicting engagement metrics, with transformer-based models outperforming traditional models. The results indicated that semantic embeddings and sentiment analysis significantly improve prediction performance. The use of multi-modal data and advanced NLP techniques enabled a deeper understanding of social media dynamics.</p>
-                <img src="./assets/images/dunes/val_likes_mae.png" alt="Likes Prediction Graph" class="project-image" data-fade>
-                <img src="./assets/images/dunes/val_replies_mae.png" alt="Comments Prediction Graph" class="project-image" data-fade>
-                <img src="./assets/images/dunes/val_retweets_mae.png" alt="Retweets Prediction Graph" class="project-image" data-fade>
+                <h6>Evaluation of Different Models</h6>
+                <img src="./assets/images/dunes/table1.png" alt="Validation Results on Different Models" class="project-image" data-fade>
+                <p>Validation results on different models show that the Transformer and Compressed Transformer models significantly outperform the traditional MLP and LSTM models in terms of prediction accuracy.</p>
+                <h6>Evaluation of Different Loss Functions</h6>
+                <p>Validation results on different loss functions reveal that Mean Absolute Error (MAE) provided the best balance between precision and robustness, particularly in predicting retweets.</p>
+                <img src="./assets/images/dunes/table2.png" alt="Validation Results on Different Loss Functions" class="project-image" data-fade>
                 <p>Overall, the project showcased the effectiveness of integrating advanced machine learning techniques for predicting social media engagement, providing valuable insights for marketers and content creators.</p>
             </div>
-          </div>
-
-            
+          </div>          
         </section>
     </article>
                 
