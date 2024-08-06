@@ -1235,3 +1235,134 @@ body {
   background-color: #f3c623;
 }
 
+/* Project Cards */
+.proj-projects-box {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 20px;
+  max-height: 120px; /* Set a fixed height for collapsed state */
+  overflow: hidden; /* Hide content that overflows */
+}
+
+.proj-projects-box.expanded {
+  max-height: none; /* Allow full height */
+  background-color: #333; /* Slightly lighter background when expanded */
+}
+
+.proj-projects-title {
+  color: #f3c623;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.proj-projects-summary {
+  color: #ccc;
+  font-size: 14px;
+}
+
+/* Expanded Project Details */
+.proj-details {
+  display: none;
+  margin-top: 10px;
+}
+
+.proj-projects-box.expanded .proj-details {
+  display: block;
+}
+
+/* Tools and Steps List Styling */
+.tools-list, .steps-list {
+  list-style-type: decimal; /* Use numbers */
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.tools-list li, .steps-list li {
+  background-color: transparent; /* Remove background color */
+  color: #fff;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Project Images */
+.project-image {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 20px auto; /* Centered */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings within project details */
+.proj-details h5 {
+  color: #f3c623;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Skills Container */
+.proj-skills-container {
+  margin-top: 10px;
+}
+
+.proj-skills-header {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #f3c623;
+}
+
+.proj-skills-content {
+  margin-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.proj-badge {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+/* Hover Effects */
+.proj-projects-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Fade-in effect */
+.proj-projects-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.proj-projects-box {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Fade-in and fade-out effects */
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.invisible {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+
+

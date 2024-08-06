@@ -386,156 +386,148 @@
       
       <article class="projects" data-page="projects">
         <header>
-          <h2 class="h2 article-title">Projects</h2>
+            <h2 class="h2 article-title">Projects</h2>
         </header>
         
         <section class="proj-projects-grid">
-          <!-- SunglassesHubETL Project -->
+          <!-- Sunglasses Hub Dataflow Project -->
           <div class="proj-projects-box fade-in" data-project-box>
-              <h4 class="proj-projects-title" data-project-title>Sunglasses Hub ETL</h4>
-              <div class="proj-skills-section" style="display:none;">
-                  <p>Developed an end-to-end data engineering pipeline to extract, transform, and load (ETL) data from the Sunglasseshut web page into a Power BI dashboard.
-                      This project demonstrates knowledge of Data Engineering tools and concepts while also providing a learning experience.</p>
-      
-                  <div class="proj-skills-container">
-                      <div class="proj-skills-row">
-                          <div class="proj-skills-header"><ion-icon name="code-slash-outline"></ion-icon> Languages</div>
-                          <div class="proj-skills-content"><span class="proj-badge">Python</span></div>
-                      </div>
-                      <div class="proj-skills-row">
-                          <div class="proj-skills-header"><ion-icon name="construct-outline"></ion-icon> Frameworks</div>
-                          <div class="proj-skills-content">
-                              <span class="proj-badge">Pydantic</span>
-                              <span class="proj-badge">Azure Synapse</span>
-                              <span class="proj-badge">Azure PostgreSQL</span>
-                          </div>
-                      </div>
-                      <div class="proj-skills-row">
-                          <div class="proj-skills-header"><ion-icon name="settings-outline"></ion-icon> Tools & Tech</div>
-                          <div class="proj-skills-content">
-                              <span class="proj-badge">Azure</span>
-                              <span class="proj-badge">Terraform</span>
-                              <span class="proj-badge">Airflow</span>
-                              <span class="proj-badge">Docker</span>
-                              <span class="proj-badge">Insomnia</span>
-                              <span class="proj-badge">Power BI</span>
-                          </div>
-                      </div>
-                  </div>
-      
-                  <button class="proj-projects-close-btn" data-project-close-btn>Close</button>
-              </div>
+            <h4 class="proj-projects-title" data-project-title>Sunglasses Hub Dataflow</h4>
+            <p class="proj-projects-summary">This pipeline extracts data from Sunglasseshut web page that will be synced into a Power BI dashboard.</p>
+            <div class="proj-details">
+                <p>This pipeline extracts data from the Sunglasseshut web page that will be synced into a Power BI dashboard.</p>
+                <h5>The tools used for this project are the following:</h5>
+                <ul class="tools-list">
+                    <li>> Azure for hosting the infrastructure.</li>
+                    <li>> Terraform as IaaC for infrastructure provisioning.</li>
+                    <li>> Airflow for orchestration.</li>
+                    <li>> Docker for containerizing the pipeline.</li>
+                    <li>> Insomnia for obtaining the code that sends requests to the Web page API.</li>
+                    <li>> Power BI for data visualization.</li>
+                    <li>> Python as the main programming language.</li>
+                </ul>
+                <h5>Project's Architecture</h5>
+                <img src="./assets/images/sunglasshut/azure_etl.png" alt="Project's Architecture" class="project-image">
+                <h5>Steps</h5>
+                <ul class="steps-list">
+                    <li>> Scraping the data using Insomnia and Python.</li>
+                    <li>> The extracted data is converted into a DataFrame that is uploaded to an Azure Storage account using the Azure Identity and Azure Blob Storage client libraries.</li>
+                    <li>> The data is cleaned and the data types are validated using Pydantic's data classes.</li>
+                    <li>> Finally, the data is delivered to Azure Synapse (Data warehouse) and Azure Database for PostgreSQL - Flexible Server.</li>
+                    <li>> Users can now analyze the data using Power BI or any other visualization tool they prefer.</li>
+                </ul>
+                <h5>Output</h5>
+                <img src="./assets/images/sunglasshut/Sunglasseshutetl_dashboard.png" alt="Dashboard Image 1" class="project-image">
+                <img src="./assets/images/sunglasshut/Sunglasseshutetl_dashboard_cheap.png" alt="Dashboard Image 2" class="project-image">
+            </div>
           </div>
-      
+          
           <!-- Reddit ETL Pipeline Project -->
           <div class="proj-projects-box fade-in" data-project-box>
-              <h4 class="proj-projects-title" data-project-title>Reddit ETL Pipeline</h4>
-              <div class="proj-skills-section" style="display:none;">
-                  <p>Developed a data pipeline to extract, transform, and load (ETL) data from the r/dataengineering subreddit into a Google Data Studio report.</p>
-      
-                  <div class="proj-skills-container">
-                      <div class="proj-skills-row">
-                          <div class="proj-skills-header"><ion-icon name="code-slash-outline"></ion-icon> Languages</div>
-                          <div class="proj-skills-content">
-                              <span class="proj-badge">Python</span>
-                              <span class="proj-badge">SQL</span>
-                          </div>
-                      </div>
-                      <div class="proj-skills-row">
-                          <div class="proj-skills-header"><ion-icon name="settings-outline"></ion-icon> Tools & Tech</div>
-                          <div class="proj-skills-content">
-                              <span class="proj-badge">AWS S3</span>
-                              <span class="proj-badge">AWS Redshift</span>
-                              <span class="proj-badge">Google Data Studio</span>
-                              <span class="proj-badge">dbt</span>
-                              <span class="proj-badge">Airflow</span>
-                          </div>
-                      </div>
-                  </div>
-      
-                  <button class="proj-projects-close-btn" data-project-close-btn>Close</button>
-              </div>
+            <h4 class="proj-projects-title" data-project-title>Reddit ETL Pipeline</h4>
+            <p class="proj-projects-summary">A data pipeline to extract Reddit data from r/dataengineering.</p>
+            <div class="proj-details" data-project-details>
+                <p>A data pipeline to extract Reddit data from r/dataengineering.</p>
+                <h5>The tools used for this project are the following:</h5>
+                <ul class="tools-list">
+                    <li>> Extract data using Reddit API</li>
+                    <li>> Load into AWS S3</li>
+                    <li>> Copy into AWS Redshift</li>
+                    <li>> Transform using dbt</li>
+                    <li>> Create PowerBI or Google Data Studio Dashboard</li>
+                    <li>> Orchestrate with Airflow in Docker</li>
+                    <li>> Create AWS resources with Terraform</li>
+                </ul>
+                <h5>Project's Architecture</h5>
+                <img src="./assets/images/reddit/workflow.png" alt="Project's Architecture" class="project-image" data-fade>
+                <h5>Steps</h5>
+                <ul class="steps-list">
+                    <li>> Extract data using Reddit API.</li>
+                    <li>> Load into AWS S3.</li>
+                    <li>> Copy into AWS Redshift.</li>
+                    <li>> Transform using dbt.</li>
+                    <li>> Create PowerBI or Google Data Studio Dashboard.</li>
+                    <li>> Orchestrate with Airflow in Docker.</li>
+                    <li>> Create AWS resources with Terraform.</li>
+                </ul>
+                <h5>Output</h5>
+                <p>!Note that Dashboard is reading from a static CSV output from Redshift. Redshift database was deleted so as not to incur cost.</p>
+                <img src="./assets/images/reddit/GDS-Dashboard.png" alt="Output Image" class="project-image" data-fade>
+            </div>
           </div>
-           
-          <!-- Quantitative Prediction of Influential Individuals’ Influence Project -->
-          <div class="proj-projects-box fade-in" data-project-box>
-            <h4 class="proj-projects-title" data-project-title>Dunes of AI</h4>
-            <div class="proj-skills-section" style="display:none;">
-                <p>Quantitative Prediction of Influential Individuals’ Influence on Community Dynamics through Advanced Language Models. </p>
-                <p>Developed a deep learning framework for predicting social media engagement metrics such as likes, comments, and retweets using advanced natural language processing (NLP) techniques. Leveraged data from Twitter and Reddit, employing semantic embeddings, sentiment analysis, and sector classification to extract relevant features. Implemented a Transformer-based neural network model to achieve superior accuracy compared to traditional MLP and LSTM models. This project aimed to provide a comprehensive understanding and prediction of content performance dynamics, addressing the complexities of social media engagement and offering valuable insights for marketers, content creators, and social scientists.</p>
 
-                <div class="proj-skills-container">
-                    <div class="proj-skills-row">
-                        <div class="proj-skills-header"><ion-icon name="code-slash-outline"></ion-icon> Languages</div>
-                        <div class="proj-skills-content">
-                            <span class="proj-badge">Python</span>
-                            <span class="proj-badge">SQL</span>
+            <!-- Dunes of AI Project
+            <div class="proj-projects-box fade-in" data-project-box>
+                <h4 class="proj-projects-title" data-project-title>Dunes of AI</h4>
+                <p class="proj-projects-summary">Quantitative Prediction of Influential Individuals’ Influence on Community Dynamics through Advanced Language Models.</p>
+                <div class="proj-details">
+                    <p>Developed a deep learning framework for predicting social media engagement metrics such as likes, comments, and retweets using advanced natural language processing (NLP) techniques. Leveraged data from Twitter and Reddit, employing semantic embeddings, sentiment analysis, and sector classification to extract relevant features. Implemented a Transformer-based neural network model to achieve superior accuracy compared to traditional MLP and LSTM models. This project aimed to provide a comprehensive understanding and prediction of content performance dynamics, addressing the complexities of social media engagement and offering valuable insights for marketers, content creators, and social scientists.</p>
+                    <div class="proj-skills-container">
+                        <div class="proj-skills-row">
+                            <div class="proj-skills-header"><ion-icon name="code-slash-outline"></ion-icon> Languages</div>
+                            <div class="proj-skills-content">
+                                <span class="proj-badge">Python</span>
+                                <span class="proj-badge">SQL</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="proj-skills-row">
-                        <div class="proj-skills-header"><ion-icon name="construct-outline"></ion-icon> Frameworks</div>
-                        <div class="proj-skills-content">
-                            <span class="proj-badge">TensorFlow</span>
-                            <span class="proj-badge">PyTorch</span>
-                            <span class="proj-badge">Transformers</span>
+                        <div class="proj-skills-row">
+                            <div class="proj-skills-header"><ion-icon name="construct-outline"></ion-icon> Frameworks</div>
+                            <div class="proj-skills-content">
+                                <span class="proj-badge">TensorFlow</span>
+                                <span class="proj-badge">PyTorch</span>
+                                <span class="proj-badge">Transformers</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="proj-skills-row">
-                        <div class="proj-skills-header"><ion-icon name="settings-outline"></ion-icon> Tools & Tech</div>
-                        <div class="proj-skills-content">
-                            <span class="proj-badge">Twitter API</span>
-                            <span class="proj-badge">Reddit API</span>
-                            <span class="proj-badge">NLP</span>
-                            <span class="proj-badge">Sentiment Analysis</span>
-                            <span class="proj-badge">Semantic Embeddings</span>
+                        <div class="proj-skills-row">
+                            <div class="proj-skills-header"><ion-icon name="settings-outline"></ion-icon> Tools & Tech</div>
+                            <div class="proj-skills-content">
+                                <span class="proj-badge">Twitter API</span>
+                                <span class="proj-badge">Reddit API</span>
+                                <span class="proj-badge">NLP</span>
+                                <span class="proj-badge">Sentiment Analysis</span>
+                                <span class="proj-badge">Semantic Embeddings</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <button class="proj-projects-close-btn" data-project-close-btn>Close</button>
-              </div>
             </div>
-
+    
             <!-- UrbanVisionAI Project -->
             <div class="proj-projects-box fade-in" data-project-box>
-              <h4 class="proj-projects-title" data-project-title>Urban Vision AI</h4>
-              <div class="proj-skills-section" style="display:none;">
-                  <p> A Deep Learning Approach to Urban Development. </p>
-                  <p> UrbanVisionAI is a cutting-edge generative AI project aimed at revolutionizing urban development through deep learning. The project leverages advanced machine learning techniques to generate, analyze, and optimize urban layouts, ensuring sustainable and efficient use of space in rapidly growing cities. The core of the project involves creating a generative model capable of designing urban areas that maximize green spaces, optimize traffic flow, and enhance the overall quality of life for residents.</p>
-
-                  <p>With the rapid urbanization occurring globally, cities face numerous challenges, including overcrowding, traffic congestion, and inadequate green spaces. Traditional urban planning methods often struggle to keep up with these dynamic changes and the complexity of modern urban ecosystems. UrbanVisionAI addresses these challenges by utilizing deep learning to provide innovative solutions that are both scalable and adaptable. The project aims to assist urban planners and policymakers in making data-driven decisions that promote sustainable and livable urban environments.</p>
-
-                  <div class="proj-skills-container">
-                      <div class="proj-skills-row">
-                          <div class="proj-skills-header"><ion-icon name="code-slash-outline"></ion-icon> Languages</div>
-                          <div class="proj-skills-content"><span class="proj-badge">Python</span></div>
-                      </div>
-                      <div class="proj-skills-row">
-                          <div class="proj-skills-header"><ion-icon name="construct-outline"></ion-icon> Frameworks</div>
-                          <div class="proj-skills-content">
-                              <span class="proj-badge">TensorFlow</span>
-                              <span class="proj-badge">PyTorch</span>
-                              <span class="proj-badge">GANs</span>
-                          </div>
-                      </div>
-                      <div class="proj-skills-row">
-                          <div class="proj-skills-header"><ion-icon name="settings-outline"></ion-icon> Tools & Tech</div>
-                          <div class="proj-skills-content">
-                              <span class="proj-badge">GIS Data</span>
-                              <span class="proj-badge">Satellite Imagery</span>
-                              <span class="proj-badge">Public Data Sets</span>
-                              <span class="proj-badge">HPC</span>
-                              <span class="proj-badge">Hyperparameter Tuning</span>
-                          </div>
-                      </div>
-                  </div>
-
-                  <button class="proj-projects-close-btn" data-project-close-btn>Close</button>
-              </div>
-          </div>
+                <h4 class="proj-projects-title" data-project-title>Urban Vision AI</h4>
+                <p class="proj-projects-summary">A Deep Learning Approach to Urban Development.</p>
+                <div class="proj-details">
+                    <p>UrbanVisionAI is a cutting-edge generative AI project aimed at revolutionizing urban development through deep learning. The project leverages advanced machine learning techniques to generate, analyze, and optimize urban layouts, ensuring sustainable and efficient use of space in rapidly growing cities. The core of the project involves creating a generative model capable of designing urban areas that maximize green spaces, optimize traffic flow, and enhance the overall quality of life for residents.</p>
+                    <p>With the rapid urbanization occurring globally, cities face numerous challenges, including overcrowding, traffic congestion, and inadequate green spaces. Traditional urban planning methods often struggle to keep up with these dynamic changes and the complexity of modern urban ecosystems. UrbanVisionAI addresses these challenges by utilizing deep learning to provide innovative solutions that are both scalable and adaptable. The project aims to assist urban planners and policymakers in making data-driven decisions that promote sustainable and livable urban environments.</p>
+                    <div class="proj-skills-container">
+                        <div class="proj-skills-row">
+                            <div class="proj-skills-header"><ion-icon name="code-slash-outline"></ion-icon> Languages</div>
+                            <div class="proj-skills-content"><span class="proj-badge">Python</span></div>
+                        </div>
+                        <div class="proj-skills-row">
+                            <div class="proj-skills-header"><ion-icon name="construct-outline"></ion-icon> Frameworks</div>
+                            <div class="proj-skills-content">
+                                <span class="proj-badge">TensorFlow</span>
+                                <span class="proj-badge">PyTorch</span>
+                                <span class="proj-badge">GANs</span>
+                            </div>
+                        </div>
+                        <div class="proj-skills-row">
+                            <div class="proj-skills-header"><ion-icon name="settings-outline"></ion-icon> Tools & Tech</div>
+                            <div class="proj-skills-content">
+                                <span class="proj-badge">GIS Data</span>
+                                <span class="proj-badge">Satellite Imagery</span>
+                                <span class="proj-badge">Public Data Sets</span>
+                                <span class="proj-badge">HPC</span>
+                                <span class="proj-badge">Hyperparameter Tuning</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
         </section>
-      </article>    
-            
+    </article>
+                
       <!-- <article class="contact" data-page="contact">
         <header>
           <h2 class="h2 article-title">Contact</h2>
