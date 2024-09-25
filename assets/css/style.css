@@ -1401,3 +1401,12 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.resume-link {
+  font-size: 0.8em; /* Makes the link smaller than the surrounding text */
+  color: #f3c623; /* Adjust the color to match the purple look */
+  text-decoration: none; /* Removes underline */
+}
+
+.resume-link:hover {
+  text-decoration: underline; /* Adds underline on hover */
+}
