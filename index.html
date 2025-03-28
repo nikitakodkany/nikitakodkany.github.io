@@ -118,7 +118,7 @@
                 <ion-icon name="settings-outline"></ion-icon>
               </div>
               <h3>Machine Learning Engineering</h3>
-              <p>0-1 years of experience in MLE, working on deploying and optimizing machine learning models</p>
+              <p>2-4 years of experience in MLE, working on deploying and optimizing machine learning models</p>
             </div>
       
             <!-- Data Engineering -->
@@ -352,11 +352,11 @@
                 <p class="timeline-text">Data Science & Analytics Intern</p>
               </div>
               <ul class="timeline-description">
-                <li>> Led the conversion of three QlikSense dashboards to Tableau, significantly boosting analytics and data processing speed</li>
+                <li>> Led the conversion of QlikSense dashboards to Tableau, significantly boosting analytics and data processing speed</li>
                 <li>> Implemented and automated an email subscription system via Tableau, providing regular performance reports to healthcare providers and enhancing communication</li>
-                <li>> Enhanced ICU predictive analytics using NLP for care escalation forecasts</li>
                 <li>> Validated data ingestion across platforms (HeA, AWS Redshift, Snowflake) using SQL, ensuring high dashboard accuracy and reducing discrepancies</li>
                 <li>> Processed and analyzed extensive patient records of EHR data to build ML models predicting Length of Stay (LOS) and mortality rates</li>
+                <li>> Enhanced ICU predictive analytics using NLP for care escalation forecasts</li>
                 <li>> Created one-pagers for dashboards and documentation for new orients on the department's Data Portal</li>
                 <li>> Presented these initiatives to the Executive Leadership Team, showcasing improvements in data accuracy, processing speed, and operational efficiency</li>
             </ul>            
@@ -432,110 +432,252 @@
         </header>
         
         <section class="proj-projects-grid">
+        
           <!-- Sunglasses Hub Dataflow Project -->
           <div class="proj-projects-box fade-in" data-project-box>
+            <a href="https://github.com/nikitakodkany/sunglasshub-etl" target="_blank" class="github-icon-btn" title="View on GitHub">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          
             <h4 class="proj-projects-title" data-project-title>Sunglasses Hub Dataflow</h4>
-            <p class="proj-projects-summary">This pipeline extracts data from Sunglasseshut web page that will be synced into a Power BI dashboard.</p>
+            <p class="proj-projects-summary">ETL pipeline for extracting and syncing Sunglasseshut data into a Power BI dashboard.</p>
+          
             <div class="proj-details">
-                <p>This pipeline extracts data from the Sunglasseshut web page that will be synced into a Power BI dashboard.</p>
-                <h5>The tools used for this project are the following:</h5>
-                <ul class="tools-list">
-                    <li>> Azure for hosting the infrastructure.</li>
-                    <li>> Terraform as IaaC for infrastructure provisioning.</li>
-                    <li>> Airflow for orchestration.</li>
-                    <li>> Docker for containerizing the pipeline.</li>
-                    <li>> Insomnia for obtaining the code that sends requests to the Web page API.</li>
-                    <li>> Power BI for data visualization.</li>
-                    <li>> Python as the main programming language.</li>
-                </ul>
-                <h5>Project's Architecture</h5>
-                <img src="./assets/images/sunglasshut/azure_etl.png" alt="Project's Architecture" class="project-image">
-                <h5>Steps</h5>
-                <ul class="steps-list">
-                    <li>> Scraping the data using Insomnia and Python.</li>
-                    <li>> The extracted data is converted into a DataFrame that is uploaded to an Azure Storage account using the Azure Identity and Azure Blob Storage client libraries.</li>
-                    <li>> The data is cleaned and the data types are validated using Pydantic's data classes.</li>
-                    <li>> Finally, the data is delivered to Azure Synapse (Data warehouse) and Azure Database for PostgreSQL - Flexible Server.</li>
-                    <li>> Users can now analyze the data using Power BI or any other visualization tool they prefer.</li>
-                </ul>
-                <h5>Output</h5>
-                <img src="./assets/images/sunglasshut/Sunglasseshutetl_dashboard.png" alt="Dashboard Image 1" class="project-image">
-                <img src="./assets/images/sunglasshut/Sunglasseshutetl_dashboard_cheap.png" alt="Dashboard Image 2" class="project-image">
+              <p>This project extracts and processes product data from Sunglasseshut, syncs it into a cloud data warehouse, and visualizes it using Power BI.</p>
+          
+              <h5>The tools used for this project are the following:</h5>
+              <ul class="tools-list">
+                <li>> Azure (Storage + Synapse + PostgreSQL)</li>
+                <li>> Terraform for infrastructure provisioning</li>
+                <li>> Airflow for orchestration</li>
+                <li>> Docker for containerization</li>
+                <li>> Insomnia + Python for API requests and scraping</li>
+                <li>> Power BI for visualization</li>
+              </ul>
+          
+              <h5>Workflow Steps</h5>
+              <ul class="steps-list">
+                <li>> Scrape and extract product data</li>
+                <li>> Validate and transform data using Pydantic</li>
+                <li>> Upload to Azure Blob and Synapse</li>
+                <li>> Visualize with Power BI</li>
+              </ul>
+          
+              <h5>Output</h5>
+              <img src="./assets/images/sunglasshut/Sunglasseshutetl_dashboard.png" alt="Dashboard Image 1" class="project-image">
+              <img src="./assets/images/sunglasshut/Sunglasseshutetl_dashboard_cheap.png" alt="Dashboard Image 2" class="project-image">
             </div>
           </div>
           
           <!-- Reddit ETL Pipeline Project -->
           <div class="proj-projects-box fade-in" data-project-box>
+            <a href="https://github.com/nikitakodkany/reddit-api-etl" target="_blank" class="github-icon-btn" title="View on GitHub">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          
             <h4 class="proj-projects-title" data-project-title>Reddit ETL Pipeline</h4>
-            <p class="proj-projects-summary">A data pipeline to extract Reddit data from r/dataengineering.</p>
+            <p class="proj-projects-summary">A cloud-based ETL pipeline for extracting, storing, and visualizing Reddit posts.</p>
+          
             <div class="proj-details" data-project-details>
-                <p>A data pipeline to extract Reddit data from r/dataengineering.</p>
-                <h5>The tools used for this project are the following:</h5>
-                <ul class="tools-list">
-                    <li>> Extract data using Reddit API</li>
-                    <li>> Load into AWS S3</li>
-                    <li>> Copy into AWS Redshift</li>
-                    <li>> Transform using dbt</li>
-                    <li>> Create PowerBI or Google Data Studio Dashboard</li>
-                    <li>> Orchestrate with Airflow in Docker</li>
-                    <li>> Create AWS resources with Terraform</li>
-                </ul>
-                <h5>Project's Architecture</h5>
-                <img src="./assets/images/reddit/workflow.png" alt="Project's Architecture" class="project-image" data-fade>
-                <h5>Steps</h5>
-                <ul class="steps-list">
-                    <li>> Extract data using Reddit API.</li>
-                    <li>> Load into AWS S3.</li>
-                    <li>> Copy into AWS Redshift.</li>
-                    <li>> Transform using dbt.</li>
-                    <li>> Create PowerBI or Google Data Studio Dashboard.</li>
-                    <li>> Orchestrate with Airflow in Docker.</li>
-                    <li>> Create AWS resources with Terraform.</li>
-                </ul>
-                <h5>Output</h5>
-                <p>!Note that Dashboard is reading from a static CSV output from Redshift. Redshift database was deleted so as not to incur cost.</p>
-                <img src="./assets/images/reddit/GDS-Dashboard.png" alt="Output Image" class="project-image" data-fade>
+              <p>Built a complete data pipeline to ingest data from r/dataengineering, transform it, and visualize trends on AWS and Power BI.</p>
+          
+              <h5>The tools used for this project are the following:</h5>
+              <ul class="tools-list">
+                <li>> Reddit API + Python for extraction</li>
+                <li>> AWS S3 + Redshift for storage</li>
+                <li>> dbt for transformations</li>
+                <li>> Airflow + Docker for orchestration</li>
+                <li>> Power BI + Google Data Studio for visualization</li>
+                <li>> Terraform for infrastructure setup</li>
+              </ul>
+          
+              <h5>Workflow Steps</h5>
+              <ul class="steps-list">
+                <li>> Extract posts from Reddit</li>
+                <li>> Store in S3 and copy into Redshift</li>
+                <li>> Transform using dbt models</li>
+                <li>> Visualize with BI tools</li>
+              </ul>
+          
+              <h5>Output</h5>
+              <p>Note: Dashboard visualizes a static export due to Redshift deallocation.</p>
+              <img src="./assets/images/reddit/GDS-Dashboard.png" alt="Dashboard Output" class="project-image">
+            </div>
+          </div>
+                    
+          <!-- Dunes of Influence Project -->
+          <div class="proj-projects-box fade-in" data-project-box>
+            <a href="https://github.com/nikitakodkany/csci566s-24" target="_blank" class="github-icon-btn" title="View on GitHub">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          
+            <h4 class="proj-projects-title" data-project-title>Dunes of Influence</h4>
+            <p class="proj-projects-summary">Predicting influence of individuals on community dynamics using transformer-based deep learning models.</p>
+          
+            <div class="proj-details" data-project-details>
+              <p>Designed a deep learning system that predicts social media post engagement metrics by analyzing content and user influence using advanced NLP techniques.</p>
+          
+              <h5>Tools and Technologies</h5>
+              <ul class="tools-list">
+                <li>> Python, Pandas, Scikit-learn</li>
+                <li>> PyTorch, TensorFlow</li>
+                <li>> Jupyter Notebooks</li>
+                <li>> Sentiment analysis, content embeddings</li>
+              </ul>
+          
+              <h5>Workflow Steps</h5>
+              <ul class="steps-list">
+                <li>> Collect and clean Twitter & Reddit data</li>
+                <li>> Perform feature extraction: sentiment, topic classification, embeddings</li>
+                <li>> Build transformer-based prediction models</li>
+                <li>> Compare against MLP, LSTM baselines</li>
+              </ul>
+          
+              <h5>Results</h5>
+              <p>Transformer models achieved higher accuracy in predicting likes, retweets, and comments compared to traditional ML models.</p>
+              <img src="./assets/images/dunes/table1.png" alt="Model Comparison" class="project-image">
+              <img src="./assets/images/dunes/table2.png" alt="Loss Comparison" class="project-image">
+            </div>
+          </div>
+                    
+          <div class="proj-projects-box fade-in" data-project-box>
+            <!-- GitHub Icon (top-right) -->
+            <a href="https://github.com/nikitakodkany/urban-dev" target="_blank" class="github-icon-btn" title="View on GitHub">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          
+            <!-- Title & Summary -->
+            <h4 class="proj-projects-title" data-project-title>Urban Development</h4>
+            <p class="proj-projects-summary">A machine learning pipeline for predictive urban data modeling.</p>
+          
+            <!-- Project Details -->
+            <div class="proj-details" data-project-details>
+              <p>This project involves scraping data from various sources, processing it, and using deep learning to train predictive models on urban development data.</p>
+          
+              <h5>The tools used for this project are the following:</h5>
+              <ul class="tools-list">
+                <li>> Python for data scraping and processing</li>
+                <li>> TensorFlow for model training</li>
+                <li>> JavaScript (custom script) for extracting web-based content</li>
+                <li>> Shell scripting and pipeline automation using Python</li>
+              </ul>
+          
+              <h5>Workflow Steps</h5>
+              <ul class="steps-list">
+                <li>> Scrape data using `dataScrap.py` and `webScript.txt`</li>
+                <li>> Use `loaction.txt` to map locations to URLs</li>
+                <li>> Process and store extracted data in `data.txt`</li>
+                <li>> Train predictive models using `mainScript.py` and `trainingPipeline.py`</li>
+              </ul>
             </div>
           </div>
           
-          <!-- Dunes of Influence Project -->
           <div class="proj-projects-box fade-in" data-project-box>
-            <h4 class="proj-projects-title" data-project-title>Dunes of Influence</h4>
-            <p class="proj-projects-summary">Quantitative Prediction of Influential Individuals' Influence on Community Dynamics through Advanced Language Models.</p>
+            <a href="https://github.com/nikitakodkany/vegReciperRecommender" target="_blank" class="github-icon-btn" title="View on GitHub">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          
+            <h4 class="proj-projects-title" data-project-title>Vegetarian Recipe Recommendation Chatbot</h4>
+            <p class="proj-projects-summary">An AI chatbot that suggests vegetarian recipes based on your ingredients, with nutrition info and step-by-step cooking guidance.</p>
+          
             <div class="proj-details" data-project-details>
-                <p>This project develops a deep learning framework to estimate potential engagement metrics such as likes, comments, and retweets for new tweets, leveraging data from social media platforms like Twitter and Reddit.</p>
-                <h5>The tools and techniques used for this project are the following:</h5>
-                <ul class="tools-list">
-                    <li>> Data Collection: Collect data from Twitter and Reddit using their respective APIs.</li>
-                    <li>> Pre-processing: Use techniques like sentiment analysis, topic classification, and content embeddings to extract relevant features.</li>
-                    <li>> Modeling: Use transformer-based neural networks to predict future engagement metrics.</li>
-                    <li>> Languages: Python for scripting and data processing.</li>
-                    <li>> Frameworks: TensorFlow, PyTorch for building and training the models.</li>
-                    <li>> Tools: Jupyter Notebook for experimentation and visualization, Pandas for data manipulation, Scikit-learn for additional data processing and model evaluation.</li>
-                </ul>
-                <h5>Project's Architecture</h5>
-                <img src="./assets/images/dunes/pipeline.png" alt="Project's Architecture" class="project-image" data-fade>
-                <h5>Steps</h5>
-                <ul class="steps-list">
-                    <li>> Collect data from Twitter and Reddit.</li>
-                    <li>> Pre-process the data using sentiment analysis, topic classification, and content embeddings.</li>
-                    <li>> Feed the processed data into a transformer-based neural network.</li>
-                    <li>> Train the model using historical data.</li>
-                    <li>> Validate the model using various performance metrics.</li>
-                    <li>> Predict engagement metrics such as likes, comments, and retweets for new tweets.</li>
-                </ul>
-                <h5>Results and Conclusion</h5>
-                <h6>Model Performance</h6>
-                <p>The model demonstrated high accuracy in predicting engagement metrics, with transformer-based models outperforming traditional models. The results indicated that semantic embeddings and sentiment analysis significantly improve prediction performance. The use of multi-modal data and advanced NLP techniques enabled a deeper understanding of social media dynamics.</p>
-                <h6>Evaluation of Different Models</h6>
-                <img src="./assets/images/dunes/table1.png" alt="Validation Results on Different Models" class="project-image" data-fade>
-                <p>Validation results on different models show that the Transformer and Compressed Transformer models significantly outperform the traditional MLP and LSTM models in terms of prediction accuracy.</p>
-                <h6>Evaluation of Different Loss Functions</h6>
-                <p>Validation results on different loss functions reveal that Mean Absolute Error (MAE) provided the best balance between precision and robustness, particularly in predicting retweets.</p>
-                <img src="./assets/images/dunes/table2.png" alt="Validation Results on Different Loss Functions" class="project-image" data-fade>
-                <p>Overall, the project showcased the effectiveness of integrating advanced machine learning techniques for predicting social media engagement, providing valuable insights for marketers and content creators.</p>
+              <p>This LLM-powered chatbot makes vegetarian cooking simple by recommending personalized recipes, complete with instructions and macronutrient breakdowns.</p>
+          
+              <h5>Key Features</h5>
+              <ul class="steps-list">
+                <li>> Ingredient-based recipe matching using semantic search</li>
+                <li>> LLM-generated cooking instructions</li>
+                <li>> Macronutrient lookup using USDA data</li>
+                <li>> Optimized vector retrieval with LLaMA embeddings + ChromaDB</li>
+              </ul>
+          
+              <h5>Dataset</h5>
+              <ul class="tools-list">
+                <li>> Food.com dataset with 10,000+ vegetarian recipes</li>
+                <li>> Includes ingredients, nutrition info, instructions, and user reviews</li>
+              </ul>
+          
+              <h5>Tech Stack</h5>
+              <ul class="tools-list">
+                <li>> Python (Pandas, NumPy)</li>
+                <li>> LLaMA embeddings + ChromaDB</li>
+                <li>> OpenAI API for conversational responses</li>
+                <li>> Streamlit UI for interaction (optional)</li>
+              </ul>
             </div>
-          </div>          
+          </div>
+          
+          <div class="proj-projects-box fade-in" data-project-box>
+            <a href="https://github.com/nikitakodkany/AgenticAI-ResearchPaper" target="_blank" class="github-icon-btn" title="View on GitHub">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          
+            <h4 class="proj-projects-title" data-project-title>RAG-Powered Multi-Agent Research Assistant</h4>
+            <p class="proj-projects-summary">An autonomous, multi-agent research assistant for literature reviews using LangChain, LangGraph, and pgvector.</p>
+          
+            <div class="proj-details" data-project-details>
+              <p>This AI agent automates literature reviews by retrieving academic papers, analyzing findings, and generating structured research summaries through a LangGraph multi-agent system and RAG pipeline.</p>
+          
+              <h5>Key Features</h5>
+              <ul class="steps-list">
+                <li>> Retrieval-Augmented Generation (RAG) using pgvector</li>
+                <li>> Multi-agent task routing with LangGraph + LangChain</li>
+                <li>> Real-time paper retrieval from ArXiv API</li>
+                <li>> GPT-4 powered research synthesis and critique</li>
+                <li>> Streamlit UI and FastAPI backend</li>
+              </ul>
+          
+              <h5>Tech Stack</h5>
+              <ul class="tools-list">
+                <li>> GPT-4 + OpenAI API</li>
+                <li>> LangChain + LangGraph</li>
+                <li>> ArXiv API for academic paper retrieval</li>
+                <li>> PostgreSQL + pgvector for embedding storage</li>
+                <li>> FastAPI for deployment</li>
+                <li>> Streamlit for frontend</li>
+                <li>> Docker for containerization</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="proj-projects-box fade-in" data-project-box>
+            <a href="https://github.com/nikitakodkany/edgecloud-wildfire-detection" target="_blank" class="github-icon-btn" title="View on GitHub">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          
+            <h4 class="proj-projects-title" data-project-title>Edge-to-Cloud Wildfire Detection System</h4>
+            <p class="proj-projects-summary">A scalable AI pipeline for wildfire detection using satellite imagery and real-time inference from edge to cloud.</p>
+          
+            <div class="proj-details" data-project-details>
+              <p>This project deploys a U-Net-based semantic segmentation model for detecting wildfires from Sentinel-2 satellite imagery. The pipeline supports edge-device simulation, ONNX Runtime, and TensorRT optimization, delivering fast and efficient cloud-scale inference.</p>
+          
+              <h5>Key Features</h5>
+              <ul class="steps-list">
+                <li>> Semantic segmentation with U-Net trained on CEMS Wildfire Dataset</li>
+                <li>> Real-time image stream simulation and frame-wise inference</li>
+                <li>> ONNX + TensorRT backend acceleration (FP16 support)</li>
+                <li>> Performance profiling: Latency, memory, and throughput tracking</li>
+                <li>> Streamlit dashboard for interactive output visualization</li>
+              </ul>
+          
+              <h5>Performance Highlights</h5>
+              <ul class="tools-list">
+                <li>> 3.2× speedup: From 28.01 ms/frame (CPU) → 8.74 ms/frame (GPU TensorRT)</li>
+                <li>> Further optimized to 5.10 ms/frame using TensorRT FP16</li>
+                <li>> Reduced memory usage by 42% via frame-wise execution & resolution scaling</li>
+              </ul>
+          
+              <h5>Tech Stack</h5>
+              <ul class="tools-list">
+                <li>> PyTorch (DDP for distributed training)</li>
+                <li>> ONNX Runtime + TensorRT</li>
+                <li>> NumPy, GeoTIFF preprocessing</li>
+                <li>> Streamlit for frontend</li>
+                <li>> Custom stream simulator + performance logger</li>
+              </ul>
+            </div>
+          </div>
+          
         </section>
     </article>
                 
@@ -567,7 +709,8 @@
       </article> -->
     </div>
   </main>
-
+  ...
+  <!-- Ionicons Web Components Support -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="./assets/js/script.js"></script>
