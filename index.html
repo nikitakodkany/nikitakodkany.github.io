@@ -6,13 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nikita Kodkany</title>
+  <!-- Loads custom styles -->
   <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Google Fonts: Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Favicon -->
   <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Green_Icon.svg/2048px-Green_Icon.svg.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.2/ionicons.min.css">
+
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
 </head>
 
 <body>
@@ -28,7 +35,7 @@
         </div>
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
-          <ion-icon name="chevron-down"></ion-icon>
+          <i class="bi bi-chevron-down"></i>
         </button>
       </div>
       <div class="sidebar-info_more">
@@ -36,7 +43,7 @@
         <ul class="contacts-list">
           <li class="contact-item">
             <div class="icon-box">
-              <ion-icon name="mail-open-outline"></ion-icon>
+              <i class="bi bi-envelope-open"></i>
             </div>
             <div class="contact-info">
               <p class="contact-title">Email</p>
@@ -45,7 +52,7 @@
           </li>
           <li class="contact-item">
             <div class="icon-box">
-              <ion-icon name="navigate-outline"></ion-icon>
+              <i class="bi bi-geo-alt"></i>
             </div>
             <div class="contact-info">
               <p class="contact-title">Location</p>
@@ -57,12 +64,12 @@
         <ul class="social-list">
           <li class="social-item">
             <a href="https://www.linkedin.com/in/nikitakodkany" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
+              <i class="bi bi-linkedin"></i>
             </a>
           </li>
           <li class="social-item">
             <a href="https://github.com/nikitakodkany" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
+              <i class="bi bi-github"></i>
             </a>
           </li>
         </ul>
@@ -88,6 +95,7 @@
         <header class="about-item">
           <h2 class="h2 article-title">About Me</h2>
         </header>
+      
         <section class="about-text about-item">
           <p>
             Hello! I am a Computer Science graduate from the University of Southern California.
@@ -103,10 +111,11 @@
         <section class="section what-im-doing about-item">
           <h2 class="section-title">What I'm Doing</h2>
           <div class="doing-container">
+      
             <!-- Data Science -->
             <div class="doing-item">
               <div class="doing-icon">
-                <ion-icon name="analytics-outline"></ion-icon>
+                <i class="bi bi-graph-up"></i>
               </div>
               <h3>Data Science</h3>
               <p>2-4 years of experience in Data Science, focusing on predictive modeling, statistical analysis, and machine learning</p>
@@ -115,7 +124,7 @@
             <!-- Machine Learning Engineering -->
             <div class="doing-item">
               <div class="doing-icon">
-                <ion-icon name="settings-outline"></ion-icon>
+                <i class="bi bi-gear-fill"></i>
               </div>
               <h3>Machine Learning Engineering</h3>
               <p>2-4 years of experience in MLE, working on deploying and optimizing machine learning models</p>
@@ -124,7 +133,7 @@
             <!-- Data Engineering -->
             <div class="doing-item">
               <div class="doing-icon">
-                <ion-icon name="server-outline"></ion-icon>
+                <i class="bi bi-hdd-network"></i>
               </div>
               <h3>Data Engineering</h3>
               <p>0-2 years of experience in Data Engineering, building and maintaining data pipelines and ETL processes</p>
@@ -133,55 +142,58 @@
             <!-- Data Analysis -->
             <div class="doing-item">
               <div class="doing-icon">
-                <ion-icon name="bar-chart-outline"></ion-icon>
+                <i class="bi bi-bar-chart"></i>
               </div>
               <h3>Data Analysis</h3>
               <p>0-2 years of experience in Data Analysis, providing actionable insights through data visualization and reporting</p>
             </div>
+      
           </div>
         </section>
-
+      
         <section class="section domain-experience">
           <h2 class="section-title">Domain Experience</h2>
           <div class="domain-container-horizontal">
-              <!-- Healthcare -->
-              <div class="domain-item">
-                  <div class="domain-icon">
-                      <ion-icon name="medkit-outline"></ion-icon>
-                  </div>
-                  <h3>Healthcare</h3>
-                  <p>Experience in leveraging data for healthcare analytics and predictive modeling to improve patient outcomes.</p>
-              </div>
       
-              <!-- Automobile -->
-              <div class="domain-item">
-                  <div class="domain-icon">
-                      <ion-icon name="car-sport-outline"></ion-icon>
-                  </div>
-                  <h3>Automobile</h3>
-                  <p>Worked on projects involving vehicle data analysis, predictive maintenance, and automation techniques.</p>
+            <!-- Healthcare -->
+            <div class="domain-item">
+              <div class="domain-icon">
+                <i class="bi bi-file-medical"></i>
               </div>
+              <h3>Healthcare</h3>
+              <p>Experience in leveraging data for healthcare analytics and predictive modeling to improve patient outcomes.</p>
+            </div>
       
-              <!-- Education -->
-              <div class="domain-item">
-                  <div class="domain-icon">
-                      <ion-icon name="school-outline"></ion-icon>
-                  </div>
-                  <h3>Education</h3>
-                  <p>Developed educational tools and analytics platforms to enhance learning experiences and outcomes.</p>
+            <!-- Automobile -->
+            <div class="domain-item">
+              <div class="domain-icon">
+                <i class="bi bi-car-front"></i>
               </div>
+              <h3>Automobile</h3>
+              <p>Worked on projects involving vehicle data analysis, predictive maintenance, and automation techniques.</p>
+            </div>
       
-              <!-- Agriculture -->
-              <div class="domain-item">
-                  <div class="domain-icon">
-                      <ion-icon name="leaf-outline"></ion-icon>
-                  </div>
-                  <h3>Agriculture</h3>
-                  <p>Implemented data-driven solutions for crop prediction, soil health analysis, and precision farming.</p>
+            <!-- Education -->
+            <div class="domain-item">
+              <div class="domain-icon">
+                <i class="bi bi-mortarboard"></i>
               </div>
+              <h3>Education</h3>
+              <p>Developed educational tools and analytics platforms to enhance learning experiences and outcomes.</p>
+            </div>
+      
+            <!-- Agriculture -->
+            <div class="domain-item">
+              <div class="domain-icon">
+                <i class="bi bi-tree"></i>
+              </div>
+              <h3>Agriculture</h3>
+              <p>Implemented data-driven solutions for crop prediction, soil health analysis, and precision farming.</p>
+            </div>
+      
           </div>
-        </section> 
-
+        </section>
+       
         <section class="skills about-item">
           <header>
             <h2 class="h2 article-title">Skills</h2>
@@ -189,7 +201,7 @@
           <div class="skills-list">
             <div class="skills-category">
               <div class="skills-icon">
-                <ion-icon name="code-slash-outline"></ion-icon>
+                <i name="code-slash-outline"></i>
               </div>
               <div class="skills-content">
                 <h3>Languages</h3>
@@ -204,7 +216,7 @@
             </div>
             <div class="skills-category">
               <div class="skills-icon">
-                <ion-icon name="construct-outline"></ion-icon>
+                <i name="construct-outline"></i>
               </div>
               <div class="skills-content">
                 <h3>Frameworks</h3>
@@ -226,7 +238,7 @@
             </div>
             <div class="skills-category">
               <div class="skills-icon">
-                <ion-icon name="settings-outline"></ion-icon>
+                <i name="settings-outline"></i>
               </div>
               <div class="skills-content">
                 <h3>Big Data & Distributed Systems</h3>
@@ -241,7 +253,7 @@
             </div>
             <div class="skills-category">
               <div class="skills-icon">
-                <ion-icon name="cloud-outline"></ion-icon>
+                <i name="cloud-outline"></i>
               </div>
               <div class="skills-content">
                 <h3>Cloud Platforms & Services</h3>
@@ -257,7 +269,7 @@
             </div>
             <div class="skills-category">
               <div class="skills-icon">
-                <ion-icon name="bar-chart-outline"></ion-icon>
+                <i name="bar-chart-outline"></i>
               </div>
               <div class="skills-content">
                 <h3>Data Visualization Tools</h3>
@@ -270,7 +282,7 @@
             </div>
             <div class="skills-category">
               <div class="skills-icon">
-                <ion-icon name="repeat-outline"></ion-icon>
+                <i name="repeat-outline"></i>
               </div>
               <div class="skills-content">
                 <h3>CI/CD & Automation Tools</h3>
@@ -285,7 +297,7 @@
             </div>
             <div class="skills-category">
               <div class="skills-icon">
-                <ion-icon name="folder-open-outline"></ion-icon>
+                <i name="folder-open-outline"></i>
               </div>
               <div class="skills-content">
                 <h3>Databases & Data Warehousing</h3>
@@ -309,7 +321,7 @@
         <section class="timeline">
           <div class="title-wrapper">
             <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+              <i name="book-outline"></i>
             </div>
             <h3 class="h3">Education</h3>
           </div>
@@ -338,7 +350,7 @@
         <section class="timeline">
           <div class="title-wrapper">
             <div class="icon-box">
-              <ion-icon name="briefcase-outline"></ion-icon>
+              <i name="briefcase-outline"></i>
             </div>
             <h3 class="h3">Experience</h3>
           </div>
@@ -435,7 +447,7 @@
 <!-- Sunglasses Hub Dataflow Project -->
 <div class="proj-projects-box fade-in" data-project-box>
   <a href="https://github.com/nikitakodkany/sunglasshub-etl" target="_blank" class="github-icon-btn" title="View on GitHub">
-    <ion-icon name="logo-github"></ion-icon>
+    <i name="logo-github"></i>
   </a>
   <h4 class="proj-projects-title" data-project-title>Sunglasses Hub Dataflow</h4>
   <div class="proj-details">
@@ -467,7 +479,7 @@
 <!-- Reddit ETL Pipeline Project -->
 <div class="proj-projects-box fade-in" data-project-box>
   <a href="https://github.com/nikitakodkany/reddit-api-etl" target="_blank" class="github-icon-btn" title="View on GitHub">
-    <ion-icon name="logo-github"></ion-icon>
+    <i name="logo-github"></i>
   </a>
   <h4 class="proj-projects-title" data-project-title>Reddit Data Extraction: ETL Pipeline</h4>
   <div class="proj-details">
@@ -500,7 +512,7 @@
 <!-- Dunes of Influence Project -->
 <div class="proj-projects-box fade-in" data-project-box>
   <a href="https://github.com/nikitakodkany/csci566s-24" target="_blank" class="github-icon-btn" title="View on GitHub">
-    <ion-icon name="logo-github"></ion-icon>
+    <i name="logo-github"></i>
   </a>
   <h4 class="proj-projects-title" data-project-title>Dunes of Influence</h4>
   <div class="proj-details">
@@ -528,7 +540,7 @@
 <!-- Urban Development Project -->
 <div class="proj-projects-box fade-in" data-project-box>
   <a href="https://github.com/nikitakodkany/urban-dev" target="_blank" class="github-icon-btn" title="View on GitHub">
-    <ion-icon name="logo-github"></ion-icon>
+    <i name="logo-github"></i>
   </a>
   <h4 class="proj-projects-title" data-project-title>Urban Development</h4>
   <div class="proj-details">
@@ -555,7 +567,7 @@
 <!-- Recipe Recommendation Chatbot -->
 <div class="proj-projects-box fade-in" data-project-box>
   <a href="https://github.com/nikitakodkany/vegReciperRecommender" target="_blank" class="github-icon-btn" title="View on GitHub">
-    <ion-icon name="logo-github"></ion-icon>
+    <i name="logo-github"></i>
   </a>
   <h4 class="proj-projects-title" data-project-title>Recipe Recommendation Chatbot for Vegetarians</h4>
   <div class="proj-details">
@@ -588,7 +600,7 @@
 <!-- RAG-Powered Research Assistant -->
 <div class="proj-projects-box fade-in" data-project-box>
   <a href="https://github.com/nikitakodkany/AgenticAI-ResearchPaper" target="_blank" class="github-icon-btn" title="View on GitHub">
-    <ion-icon name="logo-github"></ion-icon>
+    <i name="logo-github"></i>
   </a>
   <h4 class="proj-projects-title" data-project-title>RAG-Powered Multi-Agent Research Assistant</h4>
   <div class="proj-details">
@@ -622,7 +634,7 @@
 <!-- Wildfire Detection System -->
 <div class="proj-projects-box fade-in" data-project-box>
   <a href="https://github.com/nikitakodkany/edgecloud-wildfire-detection" target="_blank" class="github-icon-btn" title="View on GitHub">
-    <ion-icon name="logo-github"></ion-icon>
+    <i name="logo-github"></i>
   </a>
   <h4 class="proj-projects-title" data-project-title>Edge-to-Cloud Wildfire Detection System</h4>
   <div class="proj-details">
@@ -674,7 +686,7 @@
             </div>
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
             <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
+              <i name="paper-plane"></i>
               <span>Send Message</span>
             </button>
           </form>
@@ -684,8 +696,8 @@
   </main>
   ...
   <!-- Ionicons Web Components Support -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> -->
+  <!-- <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
   <script src="./assets/js/script.js"></script>
 </body>
 
