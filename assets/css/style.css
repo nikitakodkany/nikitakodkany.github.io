@@ -1934,6 +1934,7 @@ body {
 
 .section-title {
   position: relative;
+  padding-bottom: 7px;
 }
 
 .section-title::after {
@@ -1942,7 +1943,7 @@ body {
   bottom: 0;
   left: 0;
   width: 30px;
-  height: 5px;
+  height: 4px;
   background: var(--text-gradient-yellow);
   border-radius: 3px;
 }
