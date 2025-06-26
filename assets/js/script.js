@@ -151,46 +151,44 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Multi-select filter for Tools & Technologies (scoped per project)
-    document.querySelectorAll('.proj-projects-box').forEach(function(box) {
-        const filters = box.querySelectorAll('.tools-filter-bar .tool-filter');
-        const badges = box.querySelectorAll('.tools-badges-list .tool-badge');
-        function updateToolBadgesScoped() {
-            const activeFilters = Array.from(filters)
-                .filter(btn => btn.classList.contains('active'))
-                .map(btn => btn.dataset.filter)
-                .filter(f => f !== 'all');
-            if (activeFilters.length === 0) {
-                badges.forEach(badge => badge.classList.remove('hide'));
-                box.querySelector('.tool-filter[data-filter="all"]').classList.add('active');
-            } else {
-                badges.forEach(badge => {
-                    const cat = badge.getAttribute('data-category');
-                    if (activeFilters.includes(cat)) {
-                        badge.classList.remove('hide');
-                    } else {
-                        badge.classList.add('hide');
-                    }
-                });
-                box.querySelector('.tool-filter[data-filter="all"]').classList.remove('active');
-            }
-        }
-        filters.forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                if (btn.dataset.filter === 'all') {
-                    filters.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
+    // Multi-select filter for Tools & Technologies
+    function updateToolBadges() {
+        const activeFilters = Array.from(document.querySelectorAll('.tool-filter.active'))
+            .map(btn => btn.dataset.filter)
+            .filter(f => f !== 'all');
+        const badges = document.querySelectorAll('.tool-badge');
+        if (activeFilters.length === 0) {
+            badges.forEach(badge => badge.classList.remove('hide'));
+            document.querySelector('.tool-filter[data-filter="all"]').classList.add('active');
+        } else {
+            badges.forEach(badge => {
+                const cat = badge.getAttribute('data-category');
+                if (activeFilters.includes(cat)) {
+                    badge.classList.remove('hide');
                 } else {
-                    btn.classList.toggle('active');
-                    box.querySelector('.tool-filter[data-filter="all"]').classList.remove('active');
+                    badge.classList.add('hide');
                 }
-                // If no filter is active, default to 'all'
-                if (!box.querySelector('.tools-filter-bar .tool-filter.active')) {
-                    box.querySelector('.tool-filter[data-filter="all"]').classList.add('active');
-                }
-                updateToolBadgesScoped();
             });
+            document.querySelector('.tool-filter[data-filter="all"]').classList.remove('active');
+        }
+    }
+
+    // Tools filter multi-select
+    document.querySelectorAll('.tools-filter-bar .tool-filter').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            if (btn.dataset.filter === 'all') {
+                document.querySelectorAll('.tools-filter-bar .tool-filter').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            } else {
+                btn.classList.toggle('active');
+                document.querySelector('.tool-filter[data-filter="all"]').classList.remove('active');
+            }
+            // If no filter is active, default to 'all'
+            if (!document.querySelector('.tools-filter-bar .tool-filter.active')) {
+                document.querySelector('.tool-filter[data-filter="all"]').classList.add('active');
+            }
+            updateToolBadges();
         });
-        updateToolBadgesScoped();
     });
+    updateToolBadges();
 });

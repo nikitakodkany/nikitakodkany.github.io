@@ -335,7 +335,57 @@
                            <span class="tool-badge" data-category="Data Handling">PostgreSQL</span>
                            <span class="tool-badge" data-category="Deep Learning">Power BI</span>
                         </div>
+                        <div class="tools-filter-bar">
+                           <button class="tool-filter active" data-filter="all">All</button>
+                           <button class="tool-filter" data-filter="Web Scraping">Web Scraping</button>
+                           <button class="tool-filter" data-filter="Data Handling">Data Handling</button>
+                           <button class="tool-filter" data-filter="Deep Learning">Deep Learning</button>
+                           <button class="tool-filter" data-filter="Experiment Tracking">Experiment Tracking</button>
+                           <button class="tool-filter" data-filter="Development & Execution">Development & Execution</button>
+                        </div>
+                        <div class="tools-badges-list">
+                           <span class="tool-badge" data-category="Web Scraping">Python</span>
+                           <span class="tool-badge" data-category="Web Scraping">Insomnia</span>
+                           <span class="tool-badge" data-category="Data Handling">Pydantic</span>
+                           <span class="tool-badge" data-category="Data Handling">Azure Blob</span>
+                           <span class="tool-badge" data-category="Data Handling">Synapse</span>
+                           <span class="tool-badge" data-category="Data Handling">PostgreSQL</span>
+                           <span class="tool-badge" data-category="Deep Learning">Power BI</span>
+                        </div>
                         <h5>Workflow</h5>
+                        <div class="workflow-diagram">
+                          <div class="workflow-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                              <h6>Data Collection</h6>
+                              <p>Web scraping using JavaScript to gather urban development data</p>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">→</div>
+                          <div class="workflow-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                              <h6>Data Processing</h6>
+                              <p>Clean and preprocess the collected data</p>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">→</div>
+                          <div class="workflow-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                              <h6>Model Training</h6>
+                              <p>Train machine learning models using TensorFlow</p>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">→</div>
+                          <div class="workflow-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                              <h6>Evaluation</h6>
+                              <p>Evaluate model performance and generate results</p>
+                            </div>
+                          </div>
+                        </div>
                         <div class="workflow-diagram">
                           <div class="workflow-step">
                             <div class="step-number">1</div>
@@ -380,6 +430,7 @@
                      <i class="bi bi-github"></i>
                      </a>
                      <h4 class="proj-projects-title" data-project-title>ETL Pipeline: Reddit Data Extraction</h4>
+                     <h4 class="proj-projects-title" data-project-title>ETL Pipeline: Reddit Data Extraction</h4>
                      <div class="proj-details">
                         <p>This project involves creating a data pipeline to extract information from the r/dataengineering subreddit on Reddit. The final output is a Google Data Studio report that provides insights into the official Data Engineering subreddit.</p>
                         <h5>Key Features</h5>
@@ -390,6 +441,22 @@
                            <li>> Visualization via BI tools</li>
                         </ul>
                         <h5>Tools & Technologies</h5>
+                        <div class="tools-filter-bar">
+                           <button class="tool-filter active" data-filter="all">All</button>
+                           <button class="tool-filter" data-filter="API">API</button>
+                           <button class="tool-filter" data-filter="Transformation">Transformation</button>
+                           <button class="tool-filter" data-filter="Orchestration">Orchestration</button>
+                           <button class="tool-filter" data-filter="Visualization">Visualization</button>
+                        </div>
+                        <div class="tools-badges-list">
+                           <span class="tool-badge" data-category="API">Python</span>
+                           <span class="tool-badge" data-category="API">Reddit API</span>
+                           <span class="tool-badge" data-category="Transformation">dbt</span>
+                           <span class="tool-badge" data-category="Orchestration">Airflow</span>
+                           <span class="tool-badge" data-category="Orchestration">Docker</span>
+                           <span class="tool-badge" data-category="Visualization">Power BI</span>
+                           <span class="tool-badge" data-category="Visualization">Google Data Studio</span>
+                        </div>
                         <div class="tools-filter-bar">
                            <button class="tool-filter active" data-filter="all">All</button>
                            <button class="tool-filter" data-filter="API">API</button>
@@ -420,6 +487,7 @@
                      <i class="bi bi-github"></i>
                      </a>
                      <h4 class="proj-projects-title" data-project-title>Dunes of Influence : Quantitative Prediction of Influencers</h4>
+                     <h4 class="proj-projects-title" data-project-title>Dunes of Influence : Quantitative Prediction of Influencers</h4>
                      <div class="proj-details">
                         <p>This project builds a deep learning framework to predict engagement metrics—likes, comments, retweets—for new tweets. Using data from platforms like Twitter and Reddit, it applies advanced NLP and multi-modal analysis to forecast content performance.</p>
                         <h5>Key Features</h5>
@@ -430,7 +498,7 @@
                               <ul>
                                 <li><b>Twitter:</b> Collected 4,000 original tweets from Elon Musk, excluding replies.</li>
                                 <li><b>Reddit:</b> Curated posts from top 5 subreddits (e.g., r/ElonMusk, r/Tesla) linking Reddit discussions to tweets using a BERT-based relevance model within a 48-hour window.</li>
-                              </ul>
+                        </ul>
                             </div>
                           </div>
                           <div class="accordion-group">
@@ -442,7 +510,7 @@
                                   <ul>
                                     <li><b>Tweets:</b> twitter-roberta-base-sentiment-latest</li>
                                     <li><b>Reddit:</b> distilbert-base-uncased-emotion (6 emotion categories)</li>
-                                  </ul>
+                        </ul>
                                 </li>
                                 <li><b>Sector Classification:</b> Classified tweets into 18 topic sectors using tweet-topic-latest-multi.</li>
                               </ul>
@@ -555,6 +623,8 @@
                      <div class="proj-details">
                         <p>Spatiotemporal Data Scraping & Deep Learning Forecasting System<br>
                         This project automates the extraction of temporal web-based data and leverages deep learning to model patterns in the visual data stream.</p>
+                        <p>Spatiotemporal Data Scraping & Deep Learning Forecasting System<br>
+                        This project automates the extraction of temporal web-based data and leverages deep learning to model patterns in the visual data stream.</p>
                         <h5>Key Features</h5>
                         <div class="features-accordion">
                           <div class="accordion-group">
@@ -564,7 +634,7 @@
                                 <li><b>Dynamic Data Extraction:</b> Uses JavaScript injection (<code>webScript.txt</code>) via Selenium to pull structured data from dynamically rendered web elements.</li>
                                 <li><b>Screenshot Capturing:</b> Captures timestamped visual records of web content for downstream image-based analysis.</li>
                                 <li><b>Multi-Timestamp Scraping:</b> <code>scrapRunner.py</code> handles batch scraping for different dates using historical references (<code>data.txt</code>).</li>
-                              </ul>
+                        </ul>
                             </div>
                           </div>
                           <div class="accordion-group">
@@ -573,7 +643,7 @@
                               <ul>
                                 <li><b>URL Mapping Support:</b> Uses <code>loaction.txt</code> to define location-specific scraping targets.</li>
                                 <li><b>Historical Anchoring:</b> Aligns current data snapshots with previously recorded entries for temporal modeling.</li>
-                              </ul>
+                        </ul>
                             </div>
                           </div>
                           <div class="accordion-group">
@@ -630,9 +700,8 @@
                                 <strong>Automated Scraping:</strong> Use Selenium to download satellite imagery from ArcGIS Wayback.
                               </div>
                             </div>
-                          </div>
-                          <div class="workflow-arrow">↓</div>
-                          <div class="workflow-step yellow-border">
+                            <div class="workflow-arrow small">↓</div>
+                            <div class="workflow-step yellow-border">
                               <div class="step-number">2</div>
                               <div class="step-content">
                                 <strong>Metadata Extraction:</strong> Collect and store timestamps, coordinates, and source info for each image.
@@ -746,7 +815,9 @@
                      <i class="bi bi-github"></i>
                      </a>
                      <h4 class="proj-projects-title" data-project-title>NutriGenie: AI Recipe Recommender</h4>
+                     <h4 class="proj-projects-title" data-project-title>NutriGenie: AI Recipe Recommender</h4>
                      <div class="proj-details">
+                        <p>Veg Fitness Recipe Recommender, an AI-powered system that provides personalized meal recommendations to help you meet your fitness and nutrition goals. It combines user profile analysis, nutritional calculations, dietary/allergen filtering, and advanced recipe generation using open-source large language models (LLMs).</p>
                         <p>Veg Fitness Recipe Recommender, an AI-powered system that provides personalized meal recommendations to help you meet your fitness and nutrition goals. It combines user profile analysis, nutritional calculations, dietary/allergen filtering, and advanced recipe generation using open-source large language models (LLMs).</p>
                         <h5>Key Features</h5>
                         <div class="features-accordion">
@@ -760,10 +831,10 @@
                                     <li>Deficit: 40% protein, 40% carbs, 20% fat</li>
                                     <li>Maintenance: 30% protein, 45% carbs, 25% fat</li>
                                     <li>Bulking: 30% protein, 50% carbs, 20% fat</li>
-                                  </ul>
+                        </ul>
                                 </li>
                                 <li><b>Fiber Recommendations:</b> Smart fiber calculation (14g per 1000 calories) and dietary compliance for health.</li>
-                              </ul>
+                        </ul>
                             </div>
                           </div>
                           <div class="accordion-group">
@@ -903,6 +974,63 @@
                             </div>
                           </div>
                         </div>
+                        <div class="workflow-diagram vertical">
+                          <div class="workflow-group">
+                            <div class="workflow-heading">User Profile Input</div>
+                            <div class="workflow-step">
+                              <div class="step-number">1</div>
+                              <div class="step-content">User enters fitness goals, dietary preferences, and restrictions.</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Nutrition Calculation</div>
+                            <div class="workflow-step">
+                              <div class="step-number">2</div>
+                              <div class="step-content">System computes BMI, TDEE, calorie/macro targets, and fiber needs.</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Dietary Filtering</div>
+                            <div class="workflow-step">
+                              <div class="step-number">3</div>
+                              <div class="step-content">Filters out recipes/ingredients based on diet type and allergens.</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Recipe Search & Retrieval</div>
+                            <div class="workflow-step">
+                              <div class="step-number">4</div>
+                              <div class="step-content">Searches TheMealDB for matching recipes and uses ChromaDB for semantic, vector-based search.</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">AI Recipe Generation</div>
+                            <div class="workflow-step">
+                              <div class="step-number">5</div>
+                              <div class="step-content">If no suitable recipe is found, Mistral-7B-Instruct generates a new recipe matching nutrition targets.</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Nutritional Analysis</div>
+                            <div class="workflow-step">
+                              <div class="step-number">6</div>
+                              <div class="step-content">Estimates nutrition for each recipe using USDA FoodData Central API and performs unit conversions as needed.</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Recommendation Delivery</div>
+                            <div class="workflow-step">
+                              <div class="step-number">7</div>
+                              <div class="step-content">Presents interactive recipe cards in the Streamlit frontend with step-by-step instructions and nutrition breakdown.</div>
+                            </div>
+                          </div>
+                        </div>
                      </div>
                   </div>
                   <!-- RAG-Powered Research Assistant -->
@@ -911,7 +1039,9 @@
                      <i class="bi bi-github"></i>
                      </a>
                      <h4 class="proj-projects-title" data-project-title>CiteMind: Agentic Research Engine</h4>
+                     <h4 class="proj-projects-title" data-project-title>CiteMind: Agentic Research Engine</h4>
                      <div class="proj-details">
+                        <p>Research Paper Search and Analysis Tool (v1.2.0) - A modern, AI-powered app to search, filter, and analyze research papers with advanced vector search, metadata filters, and evaluation metrics.</p>
                         <p>Research Paper Search and Analysis Tool (v1.2.0) - A modern, AI-powered app to search, filter, and analyze research papers with advanced vector search, metadata filters, and evaluation metrics.</p>
                         <h5>Key Features</h5>
                         <div class="features-accordion">
@@ -922,7 +1052,7 @@
                                 <li><b>Vector Database Options:</b> Chroma, Pinecone, Weaviate, Milvus, Qdrant, FAISS, Elasticsearch, Redis, PostgreSQL, MongoDB</li>
                                 <li><b>Embedding Model Options:</b> Multiple HuggingFace models (all-MiniLM-L6-v2, BGE-Small, MPNet, E5, GTE), OpenAI embeddings, Cohere, Jina, Mistral</li>
                                 <li><b>LLM Provider Options:</b> Various HuggingFace models (Mistral-7B, Llama-2 variants, Mixtral), OpenAI GPT models, Anthropic Claude, Cohere Command</li>
-                              </ul>
+                        </ul>
                             </div>
                           </div>
                           <div class="accordion-group">
@@ -1091,7 +1221,7 @@
                                 <li><b>Personalized Reports:</b> Generates customized morning reports based on user preferences and location</li>
                                 <li><b>Adaptive Learning:</b> The AI agent learns from interactions to improve future updates</li>
                                 <li><b>Intelligent Content Ordering:</b> Automatically determines the most important information to display first</li>
-                              </ul>
+                        </ul>
                             </div>
                           </div>
                           <div class="accordion-group">
@@ -1201,6 +1331,43 @@
                             <div class="step-content">The system learns from interactions to improve future updates</div>
                           </div>
                         </div>
+                        <div class="workflow-diagram vertical">
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Data Collection & Analysis</div>
+                            <div class="workflow-step">
+                              <div class="step-number">1</div>
+                              <div class="step-content">System fetches data from various sources (weather, stocks, news, sports)</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">AI analyzes each category for importance and relevance</div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Categories are assigned priorities (1-5, where 1 is highest)</div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Report Generation & Delivery</div>
+                            <div class="workflow-step">
+                              <div class="step-number">4</div>
+                              <div class="step-content">A personalized report is generated with sections ordered by priority</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">The report is sent to your Telegram chat with rich formatting</div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">The system learns from interactions to improve future updates</div>
+                          </div>
+                        </div>
                      </div>
                   </div>
                   <!-- Wildfire Detection System -->
@@ -1237,7 +1404,24 @@
                            <span class="tool-badge" data-category="Optimization">TensorRT</span>
                            <span class="tool-badge" data-category="Optimization">Performance Profiling</span>
                         </div>
+                        <div class="tools-filter-bar">
+                           <button class="tool-filter active" data-filter="all">All</button>
+                           <button class="tool-filter" data-filter="Deep Learning">Deep Learning</button>
+                           <button class="tool-filter" data-filter="Real-time">Real-time</button>
+                           <button class="tool-filter" data-filter="Optimization">Optimization</button>
+                           <button class="tool-filter" data-filter="Streamlit">Streamlit</button>
+                        </div>
+                        <div class="tools-badges-list">
+                           <span class="tool-badge" data-category="Deep Learning">PyTorch</span>
+                           <span class="tool-badge" data-category="Deep Learning">NumPy</span>
+                           <span class="tool-badge" data-category="Deep Learning">U-Net</span>
+                           <span class="tool-badge" data-category="Real-time">Streamlit</span>
+                           <span class="tool-badge" data-category="Optimization">ONNX Runtime</span>
+                           <span class="tool-badge" data-category="Optimization">TensorRT</span>
+                           <span class="tool-badge" data-category="Optimization">Performance Profiling</span>
+                        </div>
                         <h5>Workflow</h5>
+                        <img src="./assets/images/wildfire/workflow.png" alt="Workflow" class="media-image">
                         <img src="./assets/images/wildfire/workflow.png" alt="Workflow" class="media-image">
                         <h5>Output / Result</h5>
                         <p>Achieved 5.10 ms/frame with TensorRT FP16 at 128×128 resolution.</p>
@@ -1386,7 +1570,7 @@
                      <a href="https://github.com/nikitakodkany/show-time-ticket-booking" target="_blank" class="github-icon-btn" title="View on GitHub">
                      <i class="bi bi-github"></i>
                      </a>
-                     <h4 class="proj-projects-title" data-project-title>ShowTime: Full-Stack Ticket Booking Platform</h4>
+                     <h4 class="proj-projects-title" data-project-title>Show Time - Full-Stack Ticket Booking Platform</h4>
                      <div class="proj-details">
                         <p>A modern, production-ready ticket booking application similar to Ticketmaster, built with React, Node.js, and PostgreSQL. Features real-time seat selection, secure payments, comprehensive search and filtering, Ticketmaster API integration, personalized user experience, and beautiful dark mode interface.</p>
                         <h5>Key Features</h5>
