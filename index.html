@@ -318,17 +318,57 @@
                            <li>> Dashboard with Power BI</li>
                         </ul>
                         <h5>Tools & Technologies</h5>
-                        <ul class="tools-list">
-                           <li>> Azure (Storage, Synapse, PostgreSQL): Hosting the infrastructure.</li>
-                           <li>> Terraform: Infrastructure as Code (IaaC) for resource provisioning.</li>
-                           <li>> Airflow: Workflow orchestration.</li>
-                           <li>> Docker: Containerization of the pipeline.</li>
-                           <li>> Insomnia: Generating code to send requests to the web page API.</li>
-                           <li>> Python</li>
-                           <li>> Power BI</li>
-                        </ul>
+                        <div class="tools-filter-bar">
+                           <button class="tool-filter active" data-filter="all">All</button>
+                           <button class="tool-filter" data-filter="Web Scraping">Web Scraping</button>
+                           <button class="tool-filter" data-filter="Data Handling">Data Handling</button>
+                           <button class="tool-filter" data-filter="Deep Learning">Deep Learning</button>
+                           <button class="tool-filter" data-filter="Experiment Tracking">Experiment Tracking</button>
+                           <button class="tool-filter" data-filter="Development & Execution">Development & Execution</button>
+                        </div>
+                        <div class="tools-badges-list">
+                           <span class="tool-badge" data-category="Web Scraping">Python</span>
+                           <span class="tool-badge" data-category="Web Scraping">Insomnia</span>
+                           <span class="tool-badge" data-category="Data Handling">Pydantic</span>
+                           <span class="tool-badge" data-category="Data Handling">Azure Blob</span>
+                           <span class="tool-badge" data-category="Data Handling">Synapse</span>
+                           <span class="tool-badge" data-category="Data Handling">PostgreSQL</span>
+                           <span class="tool-badge" data-category="Deep Learning">Power BI</span>
+                        </div>
                         <h5>Workflow</h5>
-                        <img src="./assets/images/sunglasshut/workflow.png" alt="Model Comparison" class="media-image">
+                        <div class="workflow-diagram">
+                          <div class="workflow-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                              <h6>Data Collection</h6>
+                              <p>Web scraping using JavaScript to gather urban development data</p>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">→</div>
+                          <div class="workflow-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                              <h6>Data Processing</h6>
+                              <p>Clean and preprocess the collected data</p>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">→</div>
+                          <div class="workflow-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                              <h6>Model Training</h6>
+                              <p>Train machine learning models using TensorFlow</p>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">→</div>
+                          <div class="workflow-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                              <h6>Evaluation</h6>
+                              <p>Evaluate model performance and generate results</p>
+                            </div>
+                          </div>
+                        </div>
                         <h5>Output / Result</h5>
                         <img src="./assets/images/sunglasshut/Sunglasseshutetl_dashboard.png" alt="Dashboard Image 1" class="media-image">
                         <img src="./assets/images/sunglasshut/Sunglasseshutetl_dashboard_cheap.png" alt="Dashboard Image 2" class="media-image">
@@ -339,7 +379,7 @@
                      <a href="https://github.com/nikitakodkany/reddit-api-etl" target="_blank" class="github-icon-btn" title="View on GitHub">
                      <i class="bi bi-github"></i>
                      </a>
-                     <h4 class="proj-projects-title" data-project-title>ETL Pipeline: Reddit Data Extraction: ETL Pipeline</h4>
+                     <h4 class="proj-projects-title" data-project-title>ETL Pipeline: Reddit Data Extraction</h4>
                      <div class="proj-details">
                         <p>This project involves creating a data pipeline to extract information from the r/dataengineering subreddit on Reddit. The final output is a Google Data Studio report that provides insights into the official Data Engineering subreddit.</p>
                         <h5>Key Features</h5>
@@ -350,14 +390,22 @@
                            <li>> Visualization via BI tools</li>
                         </ul>
                         <h5>Tools & Technologies</h5>
-                        <ul class="tools-list">
-                           <li>> Python, Reddit API</li>
-                           <li>> AWS S3, Redshift</li>
-                           <li>> dbt</li>
-                           <li>> Airflow, Docker</li>
-                           <li>> Terraform</li>
-                           <li>> Power BI, Google Data Studio</li>
-                        </ul>
+                        <div class="tools-filter-bar">
+                           <button class="tool-filter active" data-filter="all">All</button>
+                           <button class="tool-filter" data-filter="API">API</button>
+                           <button class="tool-filter" data-filter="Transformation">Transformation</button>
+                           <button class="tool-filter" data-filter="Orchestration">Orchestration</button>
+                           <button class="tool-filter" data-filter="Visualization">Visualization</button>
+                        </div>
+                        <div class="tools-badges-list">
+                           <span class="tool-badge" data-category="API">Python</span>
+                           <span class="tool-badge" data-category="API">Reddit API</span>
+                           <span class="tool-badge" data-category="Transformation">dbt</span>
+                           <span class="tool-badge" data-category="Orchestration">Airflow</span>
+                           <span class="tool-badge" data-category="Orchestration">Docker</span>
+                           <span class="tool-badge" data-category="Visualization">Power BI</span>
+                           <span class="tool-badge" data-category="Visualization">Google Data Studio</span>
+                        </div>
                         <h5>Workflow</h5>
                         <img src="./assets/images/reddit/workflow.png" alt="Workflow" class="media-image">
                         <h5>Output / Result</h5>
@@ -371,21 +419,126 @@
                      <a href="https://github.com/nikitakodkany/csci566s-24" target="_blank" class="github-icon-btn" title="View on GitHub">
                      <i class="bi bi-github"></i>
                      </a>
-                     <h4 class="proj-projects-title" data-project-title>LLM-Based Analysis of Social Influence</h4>
+                     <h4 class="proj-projects-title" data-project-title>Dunes of Influence : Quantitative Prediction of Influencers</h4>
                      <div class="proj-details">
                         <p>This project builds a deep learning framework to predict engagement metrics—likes, comments, retweets—for new tweets. Using data from platforms like Twitter and Reddit, it applies advanced NLP and multi-modal analysis to forecast content performance.</p>
                         <h5>Key Features</h5>
-                        <ul class="steps-list">
-                           <li>> Content-based prediction using transformers</li>
-                           <li>> Multi-platform support (Twitter, Reddit)</li>
-                           <li>> Baseline and advanced model comparison</li>
+                        <div class="features-accordion">
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Multi-Platform Data Collection <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Twitter:</b> Collected 4,000 original tweets from Elon Musk, excluding replies.</li>
+                                <li><b>Reddit:</b> Curated posts from top 5 subreddits (e.g., r/ElonMusk, r/Tesla) linking Reddit discussions to tweets using a BERT-based relevance model within a 48-hour window.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Robust Feature Engineering <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Semantic Embeddings:</b> Used mxbai-embed-large-v1 to convert tweet text into 1024-dimensional semantic vectors.</li>
+                                <li><b>Sentiment Analysis:</b>
+                                  <ul>
+                                    <li><b>Tweets:</b> twitter-roberta-base-sentiment-latest</li>
+                                    <li><b>Reddit:</b> distilbert-base-uncased-emotion (6 emotion categories)</li>
+                                  </ul>
+                                </li>
+                                <li><b>Sector Classification:</b> Classified tweets into 18 topic sectors using tweet-topic-latest-multi.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Reddit Engagement Scoring <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li>Calculated positive/negative sentiment scores of Reddit comments to derive an overall sentiment bias for each post linked to a tweet.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Transformer-Based Prediction Model <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Compression Layer:</b> Reduces high-dimensional input vectors for more efficient learning.</li>
+                                <li><b>Positional Encoding:</b> Adds temporal context to sequence data.</li>
+                                <li><b>Transformer Encoder:</b> Captures complex dependencies across semantic, sentiment, and sector features.</li>
+                                <li><b>Output Layer:</b> Predicts engagement metrics (likes, comments, retweets) using a fully connected layer and activation function.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Comparative Model Evaluation <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li>Compared performance across:
+                                  <ul>
+                                    <li>MLP (baseline)</li>
+                                    <li>LSTM</li>
+                                    <li>Transformer (with and without compression)</li>
+                                  </ul>
+                                </li>
+                                <li>Transformer outperformed LSTM and MLP on all metrics.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Advanced Optimization Techniques <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Loss Functions Evaluated:</b> MAE, MSE, Huber, Quantile</li>
+                                <li><b>Best Performing:</b> MAE and Quantile loss for skewed data.</li>
+                                <li><b>Scaling Techniques:</b>
+                                  <ul>
+                                    <li><b>Logarithmic Scaling:</b> Improved validation performance, reduced overfitting.</li>
+                                    <li><b>Robust Scaling:</b> Effective for training but prone to overfitting on validation.</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Predictive Target Metrics <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li>Forecasts 3 key user engagement metrics:
+                                  <ul>
+                                    <li>Comments</li>
+                                    <li>Likes</li>
+                                    <li>Retweets</li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Visualization & Analysis <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li>Included graphs for training/validation error convergence.</li>
+                                <li>Tables comparing metrics across models and loss functions.</li>
                         </ul>
+                            </div>
+                          </div>
+                        </div>
                         <h5>Tools & Technologies</h5>
-                        <ul class="tools-list">
-                           <li>> Python, Pandas, Scikit-learn</li>
-                           <li>> PyTorch, TensorFlow</li>
-                           <li>> Jupyter Notebooks</li>
-                        </ul>
+                        <div class="tools-filter-bar">
+                           <button class="tool-filter active" data-filter="all">All</button>
+                           <button class="tool-filter" data-filter="NLP">NLP</button>
+                           <button class="tool-filter" data-filter="Multi-platform">Multi-platform</button>
+                           <button class="tool-filter" data-filter="Baseline">Baseline</button>
+                           <button class="tool-filter" data-filter="Advanced">Advanced</button>
+                        </div>
+                        <div class="tools-badges-list">
+                           <span class="tool-badge" data-category="NLP">Python</span>
+                           <span class="tool-badge" data-category="NLP">Pandas</span>
+                           <span class="tool-badge" data-category="NLP">Scikit-learn</span>
+                           <span class="tool-badge" data-category="Multi-platform">Twitter</span>
+                           <span class="tool-badge" data-category="Multi-platform">Reddit</span>
+                           <span class="tool-badge" data-category="Baseline">Baseline</span>
+                           <span class="tool-badge" data-category="Advanced">PyTorch</span>
+                           <span class="tool-badge" data-category="Advanced">TensorFlow</span>
+                        </div>
                         <h5>Workflow</h5>
                         <img src="./assets/images/dunes/workflow.png" alt="Workflow" class="media-image">
                         <h5>Output / Result</h5>
@@ -400,20 +553,188 @@
                      </a>
                      <h4 class="proj-projects-title" data-project-title>Urban Development</h4>
                      <div class="proj-details">
-                        <p>This project focuses on developing an end-to-end machine learning pipeline...</p>
+                        <p>Spatiotemporal Data Scraping & Deep Learning Forecasting System<br>
+                        This project automates the extraction of temporal web-based data and leverages deep learning to model patterns in the visual data stream.</p>
                         <h5>Key Features</h5>
-                        <ul class="steps-list">
-                           <li>> End-to-end pipeline: scraping to training</li>
-                           <li>> Modular scripts for scraping and model training</li>
+                        <div class="features-accordion">
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Automated Web Scraping Pipeline <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Dynamic Data Extraction:</b> Uses JavaScript injection (<code>webScript.txt</code>) via Selenium to pull structured data from dynamically rendered web elements.</li>
+                                <li><b>Screenshot Capturing:</b> Captures timestamped visual records of web content for downstream image-based analysis.</li>
+                                <li><b>Multi-Timestamp Scraping:</b> <code>scrapRunner.py</code> handles batch scraping for different dates using historical references (<code>data.txt</code>).</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Configurable Location-Based Data Collection <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>URL Mapping Support:</b> Uses <code>loaction.txt</code> to define location-specific scraping targets.</li>
+                                <li><b>Historical Anchoring:</b> Aligns current data snapshots with previously recorded entries for temporal modeling.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Deep Learning with CNN-LSTM <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Sequential Image Modeling:</b> Learns from ordered image sequences using a CNN-LSTM architecture in <code>mainScript.py</code>.</li>
+                                <li><b>Visual Pattern Forecasting:</b> Predicts future states or trends based on temporal visual data inputs.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Experiment Tracking & Model Monitoring <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>WandB Integration:</b> <code>trainingPipeline.py</code> tracks training metrics, visualizes learning curves, and supports hyperparameter tuning.</li>
+                                <li><b>Reproducible Training Runs:</b> Standardized pipelines ensure consistent model behavior and traceability.</li>
                         </ul>
+                            </div>
+                          </div>
+                        </div>
                         <h5>Tools & Technologies</h5>
-                        <ul class="tools-list">
-                           <li>> Python, TensorFlow</li>
-                           <li>> JavaScript (web scraping)</li>
-                           <li>> Shell scripting</li>
-                        </ul>
+                        <div class="tools-filter-bar">
+                           <button class="tool-filter active" data-filter="all">All</button>
+                           <button class="tool-filter" data-filter="Web Scraping">Web Scraping</button>
+                           <button class="tool-filter" data-filter="Data Handling">Data Handling</button>
+                           <button class="tool-filter" data-filter="Deep Learning">Deep Learning</button>
+                           <button class="tool-filter" data-filter="Experiment Tracking">Experiment Tracking</button>
+                           <button class="tool-filter" data-filter="Development & Execution">Development & Execution</button>
+                        </div>
+                        <div class="tools-badges-list">
+                           <span class="tool-badge" data-category="Web Scraping">Python</span>
+                           <span class="tool-badge" data-category="Web Scraping">Selenium</span>
+                           <span class="tool-badge" data-category="Web Scraping">JavaScript (webScript.txt)</span>
+                           <span class="tool-badge" data-category="Web Scraping">Chromedriver / WebDriver</span>
+                           <span class="tool-badge" data-category="Web Scraping">Pillow / OpenCV (optional)</span>
+                           <span class="tool-badge" data-category="Data Handling">Pandas</span>
+                           <span class="tool-badge" data-category="Data Handling">JSON / TXT (data.txt, loaction.txt)</span>
+                           <span class="tool-badge" data-category="Deep Learning">TensorFlow / Keras</span>
+                           <span class="tool-badge" data-category="Deep Learning">NumPy</span>
+                           <span class="tool-badge" data-category="Deep Learning">CNN + LSTM</span>
+                           <span class="tool-badge" data-category="Experiment Tracking">Weights & Biases (wandb)</span>
+                           <span class="tool-badge" data-category="Development & Execution">Jupyter / VS Code</span>
+                           <span class="tool-badge" data-category="Development & Execution">Git</span>
+                           <span class="tool-badge" data-category="Development & Execution">Python Virtualenv / conda (optional)</span>
+                        </div>
                         <h5>Workflow</h5>
-                        <img src="./assets/images/urbandev/workflow.png" alt="Workflow" class="media-image">
+                        <div class="workflow-diagram vertical">
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Data Acquisition</div>
+                            <div class="workflow-step yellow-border">
+                              <div class="step-number">1</div>
+                              <div class="step-content">
+                                <strong>Automated Scraping:</strong> Use Selenium to download satellite imagery from ArcGIS Wayback.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step yellow-border">
+                              <div class="step-number">2</div>
+                              <div class="step-content">
+                                <strong>Metadata Extraction:</strong> Collect and store timestamps, coordinates, and source info for each image.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Data Preparation</div>
+                            <div class="workflow-step yellow-border">
+                              <div class="step-number">3</div>
+                              <div class="step-content">
+                                <strong>Image Preprocessing:</strong> Standardize format, resize, crop, and normalize images.
+                              </div>
+                            </div>
+                            <div class="workflow-arrow small">↓</div>
+                            <div class="workflow-step yellow-border">
+                              <div class="step-number">4</div>
+                              <div class="step-content">
+                                <strong>Temporal Sequencing:</strong> Organize images into chronological sequences for each location.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Dataset Construction</div>
+                            <div class="workflow-step yellow-border">
+                              <div class="step-number">5</div>
+                              <div class="step-content">
+                                <strong>Sequence Loader:</strong> Build input/target pairs and split into train/val/test sets.
+                              </div>
+                            </div>
+                            <div class="workflow-arrow small">↓</div>
+                            <div class="workflow-step yellow-border">
+                              <div class="step-number">6</div>
+                              <div class="step-content">
+                                <strong>Augmentation:</strong> Apply random rotations, flips, and brightness changes.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Model Development</div>
+                            <div class="workflow-step yellow-border">
+                              <div class="step-number">7</div>
+                              <div class="step-content">
+                                <strong>Architecture Design:</strong> Implement a hybrid CNN + ConvLSTM2D model with regularization.
+                              </div>
+                            </div>
+                            <div class="workflow-arrow small">↓</div>
+                            <div class="workflow-step yellow-border">
+                              <div class="step-number">8</div>
+                              <div class="step-content">
+                                <strong>Loss Functions:</strong> Combine MSE with perceptual loss for sharper predictions.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Training & Monitoring</div>
+                            <div class="workflow-step yellow-border">
+                              <div class="step-number">9</div>
+                              <div class="step-content">
+                                <strong>Model Training:</strong> Train with early stopping and learning rate scheduling.
+                              </div>
+                            </div>
+                            <div class="workflow-arrow small">↓</div>
+                            <div class="workflow-step yellow-border">
+                              <div class="step-number">10</div>
+                              <div class="step-content">
+                                <strong>Experiment Tracking:</strong> Log metrics, loss curves, and checkpoints with Weights & Biases.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Evaluation</div>
+                            <div class="workflow-step yellow-border">
+                              <div class="step-number">11</div>
+                              <div class="step-content">
+                                <strong>Performance Assessment:</strong> Evaluate using MAE, PSNR, SSIM, and visualize predictions.
+                              </div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Inference & Output</div>
+                            <div class="workflow-step yellow-border">
+                              <div class="step-number">12</div>
+                              <div class="step-content">
+                                <strong>Batch Inference:</strong> Generate future frames for new sequences using the trained model.
+                              </div>
+                            </div>
+                            <div class="workflow-arrow small">↓</div>
+                            <div class="workflow-step yellow-border">
+                              <div class="step-number">13</div>
+                              <div class="step-content">
+                                <strong>Result Packaging:</strong> Compile generated frames into GIFs and store with metadata.
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                         <h5>Output / Result</h5>
                         <img src="./assets/images/urbandev/image1.jpg" alt="Output 1" class="media-image">
                         <img src="./assets/images/urbandev/image2.jpg" alt="Output 2" class="media-image">
@@ -424,31 +745,164 @@
                      <a href="https://github.com/nikitakodkany/vegReciperRecommender" target="_blank" class="github-icon-btn" title="View on GitHub">
                      <i class="bi bi-github"></i>
                      </a>
-                     <h4 class="proj-projects-title" data-project-title>Recipe Recommendation Chatbot for Vegetarians</h4>
+                     <h4 class="proj-projects-title" data-project-title>NutriGenie: AI Recipe Recommender</h4>
                      <div class="proj-details">
-                        <p>This project is an AI-powered recipe recommendation chatbot that suggests vegetarian dishes based on the user's available ingredients. It provides: Customized Recipe Suggestions,Step-by-Step Cooking Instructions, Nutritional Information (Calories, Protein, etc.).The system utilizes Large Language Models (LLMs) for natural language understanding and vector-based retrieval for recipe matching. It is designed to be interactive and user-friendly, making vegetarian cooking accessible to everyone.</p>
+                        <p>Veg Fitness Recipe Recommender, an AI-powered system that provides personalized meal recommendations to help you meet your fitness and nutrition goals. It combines user profile analysis, nutritional calculations, dietary/allergen filtering, and advanced recipe generation using open-source large language models (LLMs).</p>
                         <h5>Key Features</h5>
-                        <ul class="steps-list">
-                           <li>> Ingredient-Based Recipe Recommendations</li>
-                           <li>> Nutritional Insights</li>
-                           <li>> Step-by-Step Cooking Instructions</li>
-                           <li>> Fast & Efficient Retrieval</li>
+                        <div class="features-accordion">
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Personalized Nutrition System <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>BMI & TDEE Calculation:</b> Automatic BMI computation based on height and weight inputs. TDEE calculation uses Mifflin-St Jeor equation for accurate daily calorie needs. Activity level support (1.2 - 1.9 multipliers). Fitness goal targeting (deficit, maintenance, bulking).</li>
+                                <li><b>Macronutrient Optimization:</b> Macro splits based on fitness goals:
+                                  <ul>
+                                    <li>Deficit: 40% protein, 40% carbs, 20% fat</li>
+                                    <li>Maintenance: 30% protein, 45% carbs, 25% fat</li>
+                                    <li>Bulking: 30% protein, 50% carbs, 20% fat</li>
+                                  </ul>
+                                </li>
+                                <li><b>Fiber Recommendations:</b> Smart fiber calculation (14g per 1000 calories) and dietary compliance for health.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Dietary Preference Management <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Supported Diet Types:</b> High-Protein Vegetarian, High-Protein Vegan, Low-Carb Vegetarian, Keto Vegetarian, Athlete/Bodybuilder Plant-Based, Whole-Food Plant-Based (WFPB), Fruitarian.</li>
+                                <li><b>Allergen & Restriction Support:</b> Gluten, dairy, nuts, soy, eggs, shellfish, fish. Dietary restrictions: Lacto-vegetarian, ovo-vegetarian, lacto-ovo vegetarian. Automatic filtering for real-time allergen detection and avoidance.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">AI-Powered Recipe Generation <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Mistral-7B-Instruct Integration:</b> Advanced LLM for nutritional targeting, ingredient intelligence, and recipe variations.</li>
+                                <li><b>Recipe Analysis Features:</b> Nutritional analysis, improvement suggestions, and macro optimization.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Recipe Database & Search <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>TheMealDB Integration:</b> 500+ categorized recipes with rich metadata and images.</li>
+                                <li><b>ChromaDB Vector Search:</b> Semantic search, embedding storage, intelligent caching, and real-time updates.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Nutritional Analysis <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>USDA FoodData Central Integration:</b> Comprehensive nutritional database, per-100g values, and real-time ingredient lookup.</li>
+                                <li><b>Unit Conversion System:</b> Supports weight, volume, common, and size conversions (g, kg, mg, lb, oz, cup, tbsp, tsp, pinch, clove, slice, piece, large, medium, small).</li>
                         </ul>
+                            </div>
+                          </div>
+                        </div>
                         <h5>Tools & Technologies</h5>
-                        <ul class="tools-list">
-                           <li>> Python (Pandas, NumPy): For cleaning and feature engineering</li>
-                           <li>> ChromaDB: For fast recipe search</li>
-                           <li>> LLaMA embeddings: For ingredient similarity & retrieval</li>
-                           <li>> OpenAI API: For chatbot conversation & recipe generation</li>
-                           <li>> FAST API: For backend engineering</li>
-                           <li>> Streamlit: For frontend engineering</li>
-                        </ul>
+                        <div class="tools-filter-bar">
+                           <button class="tool-filter active" data-filter="all">All</button>
+                           <button class="tool-filter" data-filter="Backend">Backend</button>
+                           <button class="tool-filter" data-filter="Database">Database</button>
+                           <button class="tool-filter" data-filter="AI/ML">AI/ML</button>
+                           <button class="tool-filter" data-filter="Frontend">Frontend</button>
+                           <button class="tool-filter" data-filter="Data Processing">Data Processing</button>
+                           <button class="tool-filter" data-filter="External APIs">External APIs</button>
+                           <button class="tool-filter" data-filter="Development & Deployment">Development & Deployment</button>
+                        </div>
+                        <div class="tools-badges-list">
+                           <span class="tool-badge" data-category="Backend">FastAPI</span>
+                           <span class="tool-badge" data-category="Backend">Uvicorn</span>
+                           <span class="tool-badge" data-category="Backend">Pydantic</span>
+                           <span class="tool-badge" data-category="Database">SQLAlchemy</span>
+                           <span class="tool-badge" data-category="Database">Alembic</span>
+                           <span class="tool-badge" data-category="Database">PostgreSQL</span>
+                           <span class="tool-badge" data-category="Database">ChromaDB</span>
+                           <span class="tool-badge" data-category="AI/ML">Transformers (Hugging Face)</span>
+                           <span class="tool-badge" data-category="AI/ML">PyTorch</span>
+                           <span class="tool-badge" data-category="AI/ML">Mistral-7B-Instruct</span>
+                           <span class="tool-badge" data-category="AI/ML">SentencePiece</span>
+                           <span class="tool-badge" data-category="AI/ML">Einops</span>
+                           <span class="tool-badge" data-category="AI/ML">Scikit-learn</span>
+                           <span class="tool-badge" data-category="AI/ML">Protobuf</span>
+                           <span class="tool-badge" data-category="Frontend">Streamlit</span>
+                           <span class="tool-badge" data-category="Frontend">Custom CSS</span>
+                           <span class="tool-badge" data-category="Frontend">Interactive Components</span>
+                           <span class="tool-badge" data-category="Data Processing">Pandas</span>
+                           <span class="tool-badge" data-category="Data Processing">NumPy</span>
+                           <span class="tool-badge" data-category="Data Processing">Requests</span>
+                           <span class="tool-badge" data-category="External APIs">TheMealDB API</span>
+                           <span class="tool-badge" data-category="External APIs">USDA FoodData Central API</span>
+                           <span class="tool-badge" data-category="External APIs">Hugging Face Model Hub</span>
+                           <span class="tool-badge" data-category="Development & Deployment">Python 3.x</span>
+                           <span class="tool-badge" data-category="Development & Deployment">Virtual Environment</span>
+                           <span class="tool-badge" data-category="Development & Deployment">Environment Variables</span>
+                           <span class="tool-badge" data-category="Development & Deployment">Git</span>
+                           <span class="tool-badge" data-category="Development & Deployment">Docker Support</span>
+                           <span class="tool-badge" data-category="Development & Deployment">Requirements.txt</span>
+                        </div>
                         <h5>Workflow</h5>
-                        <img src="./assets/images/chatbot/workflow.png" alt="Workflow" class="media-image">
-                        <h5>Demo Video</h5>
-                        <video class="media-video" controls>
-                           <source src="./assets/images/chatbot/video.mp4" type="video/mp4">
-                        </video>
+                        <div class="workflow-diagram vertical">
+                          <div class="workflow-group">
+                            <div class="workflow-heading">User Profile Input</div>
+                            <div class="workflow-step">
+                              <div class="step-number">1</div>
+                              <div class="step-content">User enters fitness goals, dietary preferences, and restrictions.</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Nutrition Calculation</div>
+                            <div class="workflow-step">
+                              <div class="step-number">2</div>
+                              <div class="step-content">System computes BMI, TDEE, calorie/macro targets, and fiber needs.</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Dietary Filtering</div>
+                            <div class="workflow-step">
+                              <div class="step-number">3</div>
+                              <div class="step-content">Filters out recipes/ingredients based on diet type and allergens.</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Recipe Search & Retrieval</div>
+                            <div class="workflow-step">
+                              <div class="step-number">4</div>
+                              <div class="step-content">Searches TheMealDB for matching recipes and uses ChromaDB for semantic, vector-based search.</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">AI Recipe Generation</div>
+                            <div class="workflow-step">
+                              <div class="step-number">5</div>
+                              <div class="step-content">If no suitable recipe is found, Mistral-7B-Instruct generates a new recipe matching nutrition targets.</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Nutritional Analysis</div>
+                            <div class="workflow-step">
+                              <div class="step-number">6</div>
+                              <div class="step-content">Estimates nutrition for each recipe using USDA FoodData Central API and performs unit conversions as needed.</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Recommendation Delivery</div>
+                            <div class="workflow-step">
+                              <div class="step-number">7</div>
+                              <div class="step-content">Presents interactive recipe cards in the Streamlit frontend with step-by-step instructions and nutrition breakdown.</div>
+                            </div>
+                          </div>
+                        </div>
                      </div>
                   </div>
                   <!-- RAG-Powered Research Assistant -->
@@ -456,32 +910,297 @@
                      <a href="https://github.com/nikitakodkany/AgenticAI-ResearchPaper" target="_blank" class="github-icon-btn" title="View on GitHub">
                      <i class="bi bi-github"></i>
                      </a>
-                     <h4 class="proj-projects-title" data-project-title>RAG-Powered Multi-Agent Research Assistant</h4>
+                     <h4 class="proj-projects-title" data-project-title>CiteMind: Agentic Research Engine</h4>
                      <div class="proj-details">
-                        <p>A fully automated multi-agent research assistant that retrieves academic papers, extracts insights, critiques findings, and generates structured reports using LangChain, LangGraph, and pgvector.</p>
+                        <p>Research Paper Search and Analysis Tool (v1.2.0) - A modern, AI-powered app to search, filter, and analyze research papers with advanced vector search, metadata filters, and evaluation metrics.</p>
                         <h5>Key Features</h5>
-                        <ul class="steps-list">
-                           <li>> Retrieval-Augmented Generation (RAG)</li>
-                           <li>> Multi-Agent Workflow</li>
-                           <li>> Research Paper Retrieval via ArXiv API</li>
-                           <li>> pgvector Embedding Storage</li>
-                           <li>> GPT-4 for Report Generation</li>
-                           <li>> Streamlit UI</li>
-                        </ul>
+                        <div class="features-accordion">
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Provider Selection System <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Vector Database Options:</b> Chroma, Pinecone, Weaviate, Milvus, Qdrant, FAISS, Elasticsearch, Redis, PostgreSQL, MongoDB</li>
+                                <li><b>Embedding Model Options:</b> Multiple HuggingFace models (all-MiniLM-L6-v2, BGE-Small, MPNet, E5, GTE), OpenAI embeddings, Cohere, Jina, Mistral</li>
+                                <li><b>LLM Provider Options:</b> Various HuggingFace models (Mistral-7B, Llama-2 variants, Mixtral), OpenAI GPT models, Anthropic Claude, Cohere Command</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Advanced Search & Filtering <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Semantic Search:</b> Vector-based similarity search using embeddings</li>
+                                <li><b>Metadata Filters:</b> Publication year range, research category filtering (50+ categories from arXiv), similarity threshold control, number of results control</li>
+                                <li><b>ArXiv Integration:</b> Direct search through arXiv API with category mapping</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Paper Processing & Storage <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Intelligent Chunking:</b> Text is split into semantic chunks with overlap for better context</li>
+                                <li><b>Metadata Enrichment:</b> Each chunk includes paper metadata (title, authors, date, category, etc.)</li>
+                                <li><b>Vector Embeddings:</b> Automatic embedding generation using sentence transformers</li>
+                                <li><b>ChromaDB Storage:</b> Persistent vector storage with optimized HNSW indexing</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">AI-Powered Analysis <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Paper Summarization:</b> Automatic generation of summaries, key findings, and methodology</li>
+                                <li><b>Question Answering:</b> RAG-based responses using retrieved paper context</li>
+                                <li><b>Similar Paper Discovery:</b> Find related papers based on semantic similarity</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Evaluation & Metrics System <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Search Quality Metrics:</b> Precision, Recall, F1 Score calculation</li>
+                                <li><b>Per-Query Metrics:</b> Relevance scores, response times, chunk counts</li>
+                                <li><b>Search History:</b> Track previous queries and their performance</li>
+                                <li><b>Real-time Evaluation:</b> Automatic evaluation of search results</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Langchain & Langraph Integration <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Research Agent:</b> AI agent with tools for searching and fetching papers</li>
+                                <li><b>Workflow Management:</b> StateGraph for complex research workflows</li>
+                                <li><b>Tool Integration:</b> Structured processing of research queries</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
                         <h5>Tools & Technologies</h5>
-                        <ul class="tools-list">
-                           <li>> GPT-4, LangChain, LangGraph</li>
-                           <li>> ArXiv API</li>
-                           <li>> pgvector + PostgreSQL</li>
-                           <li>> Streamlit + FastAPI</li>
-                           <li>> Docker</li>
-                        </ul>
+                        <div class="tools-filter-bar">
+                           <button class="tool-filter active" data-filter="all">All</button>
+                           <button class="tool-filter" data-filter="Backend">Backend</button>
+                           <button class="tool-filter" data-filter="Frontend">Frontend</button>
+                           <button class="tool-filter" data-filter="AI/ML">AI/ML</button>
+                           <button class="tool-filter" data-filter="Database">Database</button>
+                           <button class="tool-filter" data-filter="Tools">Tools</button>
+                        </div>
+                        <div class="tools-badges-list">
+                           <span class="tool-badge" data-category="Backend">FastAPI</span>
+                           <span class="tool-badge" data-category="Frontend">Streamlit</span>
+                           <span class="tool-badge" data-category="Database">ChromaDB</span>
+                           <span class="tool-badge" data-category="AI/ML">HuggingFace Transformers</span>
+                           <span class="tool-badge" data-category="AI/ML">Sentence Transformers</span>
+                           <span class="tool-badge" data-category="AI/ML">OpenAI API</span>
+                           <span class="tool-badge" data-category="AI/ML">Anthropic Claude</span>
+                           <span class="tool-badge" data-category="AI/ML">Cohere</span>
+                           <span class="tool-badge" data-category="AI/ML">Langchain</span>
+                           <span class="tool-badge" data-category="AI/ML">Langraph</span>
+                           <span class="tool-badge" data-category="Database">PostgreSQL</span>
+                           <span class="tool-badge" data-category="Database">Pinecone</span>
+                           <span class="tool-badge" data-category="Database">Weaviate</span>
+                           <span class="tool-badge" data-category="Database">Milvus</span>
+                           <span class="tool-badge" data-category="Database">Qdrant</span>
+                           <span class="tool-badge" data-category="Database">FAISS</span>
+                           <span class="tool-badge" data-category="Database">Elasticsearch</span>
+                           <span class="tool-badge" data-category="Database">Redis</span>
+                           <span class="tool-badge" data-category="Database">MongoDB</span>
+                           <span class="tool-badge" data-category="Tools">ArXiv API</span>
+                           <span class="tool-badge" data-category="Tools">Docker</span>
+                           <span class="tool-badge" data-category="Backend">REST API</span>
+                           <span class="tool-badge" data-category="AI/ML">Vector Search</span>
+                           <span class="tool-badge" data-category="AI/ML">HNSW Indexing</span>
+                           <span class="tool-badge" data-category="AI/ML">RAG</span>
+                           <span class="tool-badge" data-category="AI/ML">Multi-Agent Systems</span>
+                        </div>
                         <h5>Workflow</h5>
-                        <img src="./assets/images/agent/workflow.png" alt="Workflow" class="media-image">
-                        <h5>Demo Video</h5>
-                        <video class="media-video" controls>
-                           <source src="./assets/images/agent/video.mp4" type="video/mp4">
-                        </video>
+                        <div class="workflow-diagram vertical">
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Paper Search Workflow</div>
+                            <div class="workflow-step">
+                              <div class="step-number">1</div>
+                              <div class="step-content">User enters research query and system generates query embedding</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Vector search finds similar papers in ChromaDB and filters by metadata</div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Papers ranked by similarity score and results displayed with evaluation metrics</div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Paper Analysis Workflow</div>
+                            <div class="workflow-step">
+                              <div class="step-number">4</div>
+                              <div class="step-content">User selects paper and system retrieves content and metadata</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">LLM generates summary, key findings, and methodology</div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">Analysis stored with embeddings and results presented in structured format</div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Q&A Workflow</div>
+                            <div class="workflow-step">
+                              <div class="step-number">7</div>
+                              <div class="step-content">User asks question and system searches for relevant papers</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">8</div>
+                            <div class="step-content">Context extracted from top papers and LLM generates answer using retrieved context</div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">9</div>
+                            <div class="step-content">Answer provided with citations to source papers</div>
+                          </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Morning Update System -->
+                  <div class="proj-projects-box fade-in" data-project-box>
+                     <a href="https://github.com/nikitakodkany/morning-update-system" target="_blank" class="github-icon-btn" title="View on GitHub">
+                     <i class="bi bi-github"></i>
+                     </a>
+                     <h4 class="proj-projects-title" data-project-title>Morning Update System</h4>
+                     <div class="proj-details">
+                        <p>An intelligent system that generates personalized morning updates using AI to analyze and prioritize information from various sources including weather, stocks, news, and sports.</p>
+                        <h5>Key Features</h5>
+                        <div class="features-accordion">
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">AI-Powered Morning Updates <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Smart Priority Analysis:</b> Uses AI to analyze and prioritize information from different categories (weather, stocks, news, sports)</li>
+                                <li><b>Personalized Reports:</b> Generates customized morning reports based on user preferences and location</li>
+                                <li><b>Adaptive Learning:</b> The AI agent learns from interactions to improve future updates</li>
+                                <li><b>Intelligent Content Ordering:</b> Automatically determines the most important information to display first</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Multi-Source Data Integration <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Weather Data:</b> Real-time weather information using Open-Meteo API</li>
+                                <li><b>Stock Market Data:</b> Real-time stock prices and market movements using yfinance</li>
+                                <li><b>News Headlines:</b> Latest news from NewsAPI</li>
+                                <li><b>Sports Updates:</b> Game results and upcoming matches (currently using mock data)</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Telegram Integration <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Direct Delivery:</b> Sends updates directly to your Telegram chat</li>
+                                <li><b>Formatted Messages:</b> Rich text formatting with HTML support</li>
+                                <li><b>Chunked Messages:</b> Automatically splits long updates to comply with Telegram's character limits</li>
+                                <li><b>Error Handling:</b> Graceful fallback when delivery fails</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Automated Scheduling <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Daily Updates:</b> Scheduled to run automatically at 7:00 AM</li>
+                                <li><b>Windows Notifications:</b> Desktop notifications when updates are ready</li>
+                                <li><b>Background Processing:</b> Runs continuously in the background</li>
+                                <li><b>Logging:</b> Comprehensive logging of all operations</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <h5>Tools & Technologies</h5>
+                        <div class="tools-filter-bar">
+                           <button class="tool-filter active" data-filter="all">All</button>
+                           <button class="tool-filter" data-filter="AI/ML">AI/ML</button>
+                           <button class="tool-filter" data-filter="APIs">APIs</button>
+                           <button class="tool-filter" data-filter="Core Libraries">Core Libraries</button>
+                           <button class="tool-filter" data-filter="Data Management">Data Management</button>
+                           <button class="tool-filter" data-filter="Architecture">Architecture</button>
+                        </div>
+                        <div class="tools-badges-list">
+                           <span class="tool-badge" data-category="AI/ML">OpenAI GPT Models</span>
+                           <span class="tool-badge" data-category="AI/ML">Facebook OPT-350M</span>
+                           <span class="tool-badge" data-category="AI/ML">Transformers Library</span>
+                           <span class="tool-badge" data-category="AI/ML">PyTorch</span>
+                           <span class="tool-badge" data-category="APIs">Open-Meteo API</span>
+                           <span class="tool-badge" data-category="APIs">NewsAPI</span>
+                           <span class="tool-badge" data-category="APIs">yfinance</span>
+                           <span class="tool-badge" data-category="APIs">Telegram Bot API</span>
+                           <span class="tool-badge" data-category="Core Libraries">requests</span>
+                           <span class="tool-badge" data-category="Core Libraries">pyyaml</span>
+                           <span class="tool-badge" data-category="Core Libraries">python-dotenv</span>
+                           <span class="tool-badge" data-category="Core Libraries">schedule</span>
+                           <span class="tool-badge" data-category="Core Libraries">win10toast</span>
+                           <span class="tool-badge" data-category="Core Libraries">python-telegram-bot</span>
+                           <span class="tool-badge" data-category="Data Management">JSON</span>
+                           <span class="tool-badge" data-category="Data Management">YAML</span>
+                           <span class="tool-badge" data-category="Data Management">Context Management</span>
+                           <span class="tool-badge" data-category="Architecture">Agent System</span>
+                           <span class="tool-badge" data-category="Architecture">Context Manager</span>
+                           <span class="tool-badge" data-category="Architecture">Data Fetcher</span>
+                           <span class="tool-badge" data-category="Architecture">Report Generator</span>
+                           <span class="tool-badge" data-category="Architecture">Telegram Bot</span>
+                           <span class="tool-badge" data-category="Architecture">Scheduler</span>
+                           <span class="tool-badge" data-category="Architecture">Priority Decider</span>
+                        </div>
+                        <h5>Workflow</h5>
+                        <div class="workflow-diagram vertical">
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Data Collection & Analysis</div>
+                            <div class="workflow-step">
+                              <div class="step-number">1</div>
+                              <div class="step-content">System fetches data from various sources (weather, stocks, news, sports)</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">AI analyzes each category for importance and relevance</div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Categories are assigned priorities (1-5, where 1 is highest)</div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Report Generation & Delivery</div>
+                            <div class="workflow-step">
+                              <div class="step-number">4</div>
+                              <div class="step-content">A personalized report is generated with sections ordered by priority</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">The report is sent to your Telegram chat with rich formatting</div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">The system learns from interactions to improve future updates</div>
+                          </div>
+                        </div>
                      </div>
                   </div>
                   <!-- Wildfire Detection System -->
@@ -502,20 +1221,313 @@
                            <li>> Performance profiling</li>
                         </ul>
                         <h5>Tools & Technologies</h5>
-                        <ul class="tools-list">
-                           <li>> PyTorch + DDP</li>
-                           <li>> ONNX Runtime + TensorRT</li>
-                           <li>> Streamlit</li>
-                           <li>> NumPy, GeoTIFF</li>
-                        </ul>
+                        <div class="tools-filter-bar">
+                           <button class="tool-filter active" data-filter="all">All</button>
+                           <button class="tool-filter" data-filter="Deep Learning">Deep Learning</button>
+                           <button class="tool-filter" data-filter="Real-time">Real-time</button>
+                           <button class="tool-filter" data-filter="Optimization">Optimization</button>
+                           <button class="tool-filter" data-filter="Streamlit">Streamlit</button>
+                        </div>
+                        <div class="tools-badges-list">
+                           <span class="tool-badge" data-category="Deep Learning">PyTorch</span>
+                           <span class="tool-badge" data-category="Deep Learning">NumPy</span>
+                           <span class="tool-badge" data-category="Deep Learning">U-Net</span>
+                           <span class="tool-badge" data-category="Real-time">Streamlit</span>
+                           <span class="tool-badge" data-category="Optimization">ONNX Runtime</span>
+                           <span class="tool-badge" data-category="Optimization">TensorRT</span>
+                           <span class="tool-badge" data-category="Optimization">Performance Profiling</span>
+                        </div>
                         <h5>Workflow</h5>
-                        <ul class="steps-list">
-                           <li>> Preprocess Sentinel-2 imagery</li>
-                           <li>> Train U-Net and export to ONNX</li>
-                           <li>> Run streaming inference</li>
-                        </ul>
+                        <img src="./assets/images/wildfire/workflow.png" alt="Workflow" class="media-image">
                         <h5>Output / Result</h5>
                         <p>Achieved 5.10 ms/frame with TensorRT FP16 at 128×128 resolution.</p>
+                     </div>
+                  </div>
+                  <!-- Robotic Arm Path Planning -->
+                  <div class="proj-projects-box fade-in" data-project-box>
+                     <a href="https://github.com/nikitakodkany/robotic-arm-path-planning" target="_blank" class="github-icon-btn" title="View on GitHub">
+                     <i class="bi bi-github"></i>
+                     </a>
+                     <h4 class="proj-projects-title" data-project-title>Robotic Arm Path Planning</h4>
+                     <div class="proj-details">
+                        <p>A reinforcement learning-based path planning system for a 2-DOF robotic arm that learns to reach target positions in 3D space using PyBullet physics simulation and Stable-Baselines3.</p>
+                        <h5>Key Features</h5>
+                        <div class="features-accordion">
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Robotic Arm Environment <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>2-DOF (Degrees of Freedom):</b> Two revolute joints for planar motion</li>
+                                <li><b>Realistic physics:</b> Mass, inertia, damping, and friction modeling</li>
+                                <li><b>Joint limits:</b> Configurable position and velocity constraints</li>
+                                <li><b>End-effector tracking:</b> Real-time position monitoring</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Reinforcement Learning Environment <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Continuous action space:</b> 2-dimensional actions for joint control</li>
+                                <li><b>Rich observation space:</b> 10-dimensional state vector including joint positions/velocities, target coordinates, and end-effector position</li>
+                                <li><b>Reward shaping:</b> Multi-component reward function with distance-based penalties, progress rewards, success bonuses, and joint limit violations</li>
+                                <li><b>Early termination:</b> For invalid states and boundary conditions</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Training System <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>PPO Algorithm:</b> Advanced policy optimization with configurable hyperparameters (learning rate: 3e-4, steps per update: 1024, batch size: 64)</li>
+                                <li><b>Neural network architecture:</b> [128, 128] MLP for policy and value networks</li>
+                                <li><b>Model persistence:</b> Save/load trained models with automatic checkpointing</li>
+                                <li><b>Training monitoring:</b> Real-time progress tracking and performance metrics</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Evaluation & Visualization <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>GUI visualization:</b> Real-time 3D rendering with PyBullet GUI</li>
+                                <li><b>Performance metrics:</b> Success rate, average distance, motion smoothness</li>
+                                <li><b>Episode analysis:</b> Detailed per-episode statistics and trajectory visualization</li>
+                                <li><b>Camera controls:</b> Configurable viewing angles and distances for analysis</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Inverse Kinematics (IK) <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>C++ implementation:</b> High-performance IK solver for real-time execution</li>
+                                <li><b>Target reaching:</b> Automatic joint angle calculation for desired end-effector positions</li>
+                                <li><b>Distance optimization:</b> Minimize end-effector to target distance with fast convergence</li>
+                                <li><b>Cross-language integration:</b> Python-C++ communication via subprocess for optimal performance</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <h5>Tools & Technologies</h5>
+                        <div class="tools-filter-bar">
+                           <button class="tool-filter active" data-filter="all">All</button>
+                           <button class="tool-filter" data-filter="Physics Simulation">Physics Simulation</button>
+                           <button class="tool-filter" data-filter="Machine Learning">Machine Learning</button>
+                           <button class="tool-filter" data-filter="Programming">Programming</button>
+                           <button class="tool-filter" data-filter="Development Tools">Development Tools</button>
+                           <button class="tool-filter" data-filter="Robotics">Robotics</button>
+                        </div>
+                        <div class="tools-badges-list">
+                           <span class="tool-badge" data-category="Physics Simulation">PyBullet</span>
+                           <span class="tool-badge" data-category="Robotics">URDF</span>
+                           <span class="tool-badge" data-category="Physics Simulation">Real-time Physics</span>
+                           <span class="tool-badge" data-category="Machine Learning">Stable-Baselines3</span>
+                           <span class="tool-badge" data-category="Machine Learning">PPO</span>
+                           <span class="tool-badge" data-category="Machine Learning">PyTorch</span>
+                           <span class="tool-badge" data-category="Machine Learning">Gymnasium</span>
+                           <span class="tool-badge" data-category="Programming">Python</span>
+                           <span class="tool-badge" data-category="Programming">C++</span>
+                           <span class="tool-badge" data-category="Programming">Subprocess</span>
+                           <span class="tool-badge" data-category="Development Tools">NumPy</span>
+                           <span class="tool-badge" data-category="Development Tools">Matplotlib</span>
+                           <span class="tool-badge" data-category="Robotics">2-DOF Arm</span>
+                           <span class="tool-badge" data-category="Robotics">Inverse Kinematics</span>
+                           <span class="tool-badge" data-category="Robotics">Joint Control</span>
+                           <span class="tool-badge" data-category="Machine Learning">Reinforcement Learning</span>
+                           <span class="tool-badge" data-category="Machine Learning">Neural Networks</span>
+                           <span class="tool-badge" data-category="Physics Simulation">Collision Detection</span>
+                           <span class="tool-badge" data-category="Physics Simulation">Gravity Modeling</span>
+                           <span class="tool-badge" data-category="Development Tools">3D Visualization</span>
+                           <span class="tool-badge" data-category="Development Tools">Performance Metrics</span>
+                        </div>
+                        <h5>Workflow</h5>
+                        <div class="workflow-diagram vertical">
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Environment Setup & Training</div>
+                            <div class="workflow-step">
+                              <div class="step-number">1</div>
+                              <div class="step-content">Initialize 2-DOF robotic arm environment with PyBullet physics simulation</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Configure RL environment with continuous action space and 10D observation space</div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Train PPO agent with reward shaping for target reaching and joint limit compliance</div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Path Planning & Execution</div>
+                            <div class="workflow-step">
+                              <div class="step-number">4</div>
+                              <div class="step-content">Agent receives target position and current joint states as observations</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">PPO policy generates joint actions to minimize end-effector to target distance</div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">Real-time 3D visualization shows arm movement and performance metrics</div>
+                          </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Show Time - Full-Stack Ticket Booking Platform -->
+                  <div class="proj-projects-box fade-in" data-project-box>
+                     <a href="https://github.com/nikitakodkany/show-time-ticket-booking" target="_blank" class="github-icon-btn" title="View on GitHub">
+                     <i class="bi bi-github"></i>
+                     </a>
+                     <h4 class="proj-projects-title" data-project-title>ShowTime: Full-Stack Ticket Booking Platform</h4>
+                     <div class="proj-details">
+                        <p>A modern, production-ready ticket booking application similar to Ticketmaster, built with React, Node.js, and PostgreSQL. Features real-time seat selection, secure payments, comprehensive search and filtering, Ticketmaster API integration, personalized user experience, and beautiful dark mode interface.</p>
+                        <h5>Key Features</h5>
+                        <div class="features-accordion">
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Event Discovery & Browsing <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Advanced Search:</b> Real-time search by event name, artist, venue, or location</li>
+                                <li><b>Smart Filtering:</b> Date filters (Today, This Week, This Month, All Dates), price filters, category filters, location-based filtering</li>
+                                <li><b>Sorting Options:</b> By date, price, or name with real-time results and instant filtering</li>
+                                <li><b>Category Navigation:</b> Easy switching between event types (Concert, Theater, Sports, All)</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">User Experience & Personalization <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>User Profiles:</b> Complete profile management with preferences and account settings</li>
+                                <li><b>Favorites System:</b> Save favorite artists and venues for personalized experience</li>
+                                <li><b>Smart Recommendations:</b> AI-powered event suggestions based on favorites and booking history</li>
+                                <li><b>Personalized Dashboard:</b> Custom homepage with upcoming events and recommendations</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Visual & UI Features <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Dark Mode:</b> Toggle between light and dark themes with smooth transitions</li>
+                                <li><b>Event Previews:</b> Video and audio previews for events with enhanced event cards</li>
+                                <li><b>Responsive Design:</b> Optimized for all device sizes with mobile-first approach</li>
+                                <li><b>Interactive Elements:</b> Dynamic UI components with smooth animations and hover effects</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">External Integrations <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Ticketmaster API:</b> Real event data with live pricing and availability</li>
+                                <li><b>Stripe Integration:</b> Secure payment processing with comprehensive error handling</li>
+                                <li><b>Real-time Updates:</b> Live seat availability and booking status with Socket.IO</li>
+                                <li><b>Media Services:</b> Unsplash for stock images and W3Schools for sample media files</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Security & Authentication <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>JWT Authentication:</b> Secure token-based authentication with session management</li>
+                                <li><b>Role-based Access Control:</b> Admin and user roles with comprehensive permissions</li>
+                                <li><b>Input Validation:</b> Comprehensive request validation and SQL injection prevention</li>
+                                <li><b>Security Headers:</b> Rate limiting, CORS protection, and XSS protection with helmet</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <h5>Tools & Technologies</h5>
+                        <div class="tools-filter-bar">
+                           <button class="tool-filter active" data-filter="all">All</button>
+                           <button class="tool-filter" data-filter="Frontend">Frontend</button>
+                           <button class="tool-filter" data-filter="Backend">Backend</button>
+                           <button class="tool-filter" data-filter="Database">Database</button>
+                           <button class="tool-filter" data-filter="Development Tools">Development Tools</button>
+                           <button class="tool-filter" data-filter="Infrastructure">Infrastructure</button>
+                           <button class="tool-filter" data-filter="External APIs">External APIs</button>
+                        </div>
+                        <div class="tools-badges-list">
+                           <span class="tool-badge" data-category="Frontend">React 18.2.0</span>
+                           <span class="tool-badge" data-category="Frontend">Vite</span>
+                           <span class="tool-badge" data-category="Frontend">Tailwind CSS</span>
+                           <span class="tool-badge" data-category="Frontend">JavaScript ES6+</span>
+                           <span class="tool-badge" data-category="Frontend">React Hooks</span>
+                           <span class="tool-badge" data-category="Frontend">Context API</span>
+                           <span class="tool-badge" data-category="Backend">Node.js 18+</span>
+                           <span class="tool-badge" data-category="Backend">Express.js</span>
+                           <span class="tool-badge" data-category="Backend">Socket.IO</span>
+                           <span class="tool-badge" data-category="Backend">JWT</span>
+                           <span class="tool-badge" data-category="Backend">bcrypt</span>
+                           <span class="tool-badge" data-category="Backend">cors</span>
+                           <span class="tool-badge" data-category="Backend">helmet</span>
+                           <span class="tool-badge" data-category="Backend">express-rate-limit</span>
+                           <span class="tool-badge" data-category="Database">PostgreSQL 15+</span>
+                           <span class="tool-badge" data-category="Database">Prisma ORM</span>
+                           <span class="tool-badge" data-category="Development Tools">npm</span>
+                           <span class="tool-badge" data-category="Development Tools">nodemon</span>
+                           <span class="tool-badge" data-category="Development Tools">ESLint</span>
+                           <span class="tool-badge" data-category="Development Tools">Prettier</span>
+                           <span class="tool-badge" data-category="Development Tools">Git</span>
+                           <span class="tool-badge" data-category="Infrastructure">Docker</span>
+                           <span class="tool-badge" data-category="Infrastructure">Docker Compose</span>
+                           <span class="tool-badge" data-category="Infrastructure">Nginx</span>
+                           <span class="tool-badge" data-category="External APIs">Ticketmaster Discovery API</span>
+                           <span class="tool-badge" data-category="External APIs">Stripe API</span>
+                           <span class="tool-badge" data-category="External APIs">Unsplash</span>
+                           <span class="tool-badge" data-category="Frontend">Dark Mode</span>
+                           <span class="tool-badge" data-category="Frontend">Responsive Design</span>
+                           <span class="tool-badge" data-category="Backend">Real-time Updates</span>
+                           <span class="tool-badge" data-category="Backend">Role-based Access</span>
+                        </div>
+                        <h5>Workflow</h5>
+                        <div class="workflow-diagram vertical">
+                          <div class="workflow-group">
+                            <div class="workflow-heading">User Authentication & Discovery</div>
+                            <div class="workflow-step">
+                              <div class="step-number">1</div>
+                              <div class="step-content">User registers/logs in with JWT authentication and accesses personalized dashboard</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Advanced search and filtering system queries Ticketmaster API for real event data</div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Real-time results display with smart filtering by date, price, category, and location</div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Booking & Payment Process</div>
+                            <div class="workflow-step">
+                              <div class="step-number">4</div>
+                              <div class="step-content">User selects event and chooses seats with real-time availability via Socket.IO</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">Secure payment processing through Stripe API with comprehensive validation</div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">Booking confirmation stored in PostgreSQL database and user profile updated</div>
+                          </div>
+                        </div>
                      </div>
                   </div>
                </section>
