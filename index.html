@@ -1200,54 +1200,86 @@
                      </a>
                      <h4 class="proj-projects-title" data-project-title>Edge-to-Cloud Wildfire Detection System</h4>
                      <div class="proj-details">
-                        <p>This project implements a real-time wildfire detection pipeline optimized for edge-to-cloud deployment using satellite imagery from the CEMS Wildfire Dataset. The system uses a U-Net model for semantic segmentation, trained and evaluated on preprocessed Sentinel-2 images.
-
-                           With a focus on scalable inference, this solution incorporates distributed model training, ONNX Runtime deployment, performance profiling, and a Streamlit dashboard. It simulates edge-based image streaming to evaluate latency and memory usage — making it a strong demonstration of system-level thinking for AI deployment at scale.</p>
+                        <p>This project implements a real-time wildfire detection pipeline optimized for edge-to-cloud deployment, leveraging Sentinel-2 satellite imagery from the CEMS Wildfire Dataset. The system uses a custom U-Net model for semantic segmentation, trained and evaluated on preprocessed satellite images. The pipeline is designed for scalable inference, distributed training, ONNX Runtime deployment, and performance profiling, with simulation of edge-based image streaming to evaluate latency and memory usage.</p>
                         <h5>Key Features</h5>
+                        <div class="features-accordion">
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Dataset Integration & Preprocessing <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Data Source:</b> Uses open-source Sentinel-2 satellite imagery from the <a href="https://emergency.copernicus.eu/mapping/list-of-components/EMSR" target="_blank">CEMS Wildfire Dataset</a>.</li>
+                                <li><b>Preprocessing Pipeline:</b> Converts raw GeoTIFF data into normalized, resized NumPy arrays with binary masks. Reads multi-band satellite images using <code>rasterio</code>. Resizes and normalizes images with <code>opencv-python</code> and <code>numpy</code>. Splits data into train/validation/test sets using <code>scikit-learn</code>. Stores processed data as <code>.npy</code> files for efficient loading.</li>
+                                <li><b>Script:</b> <code>data/preprocess.py</code> — Handles all preprocessing steps, including directory management and mask binarization.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Semantic Segmentation Model <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Architecture:</b> Implements a U-Net model in <code>models/unet.py</code> for pixel-level wildfire region detection, with encoder, bottleneck, decoder, and skip connections.</li>
+                                <li><b>Framework:</b> Built with <code>torch</code> and <code>torch.nn</code> modules.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Distributed Training <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Distributed Data Parallel (DDP):</b> Utilizes PyTorch's DDP for multi-GPU training, enabling scalable model training across multiple devices. Data loading is distributed using <code>torch.utils.data.DistributedSampler</code>.</li>
+                                <li><b>Loss & Optimization:</b> Uses binary cross-entropy loss (<code>torch.nn.BCELoss</code>) and Adam optimizer.</li>
+                                <li><b>Script:</b> <code>models/train_ddp.py</code></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Model Export & Inference Acceleration <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>ONNX Export:</b> Converts trained PyTorch models to ONNX format for framework-agnostic, accelerated inference. Export script: <code>models/export_onnx.py</code>.</li>
+                                <li><b>ONNX Runtime Inference:</b> Runs inference using ONNX models with <code>onnxruntime</code> for high-throughput, low-latency deployment. Supports hardware-accelerated backends (CPU, CUDA, TensorRT).</li>
+                                <li><b>Input Preprocessing:</b> Images are resized, normalized, and converted to the appropriate tensor format before inference.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Performance Profiling & Benchmarking <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Profiling Utilities:</b> <code>utils/profiler.py</code> provides function-level profiling using Python's <code>cProfile</code> and <code>pstats</code>, and deep profiling of PyTorch models using <code>torch.profiler</code>.</li>
+                                <li><b>Benchmarking:</b> Logs inference latency and memory usage per frame, with summary metrics. Benchmarks across multiple input resolutions and hardware targets. Structured <code>.txt</code> reports for reproducibility and system-level evaluation.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Edge Simulation & System Evaluation <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Stream Simulator:</b> Simulates real-time image streaming from edge devices, enabling frame-by-frame inference and system evaluation. Evaluates trade-offs in latency and memory usage for different resolutions and hardware.</li>
+                                <li><b>Edge Logs:</b> Inference logs in <code>edge/</code> directory document performance across various hardware and input sizes.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Visualization & Dashboard <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Streamlit Dashboard:</b> Interactive web dashboard for monitoring, visualization, and demonstration. Built with <code>streamlit</code>, <code>matplotlib</code>, and <code>pillow</code>. Enables real-time display of inference results, performance metrics, and system status.</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <h5>Performance Highlights</h5>
                         <ul class="steps-list">
-                           <li>> Semantic Segmentation with U-Net</li>
-                           <li>> Real-time streaming inference</li>
-                           <li>> ONNX + TensorRT Optimization</li>
-                           <li>> Performance profiling</li>
+                          <li>Achieved a <b>3.2× speedup in inference throughput</b> (from 28.01 ms/frame on CPU to 8.74 ms/frame on GPU TensorRT, and 5.10 ms/frame with TensorRT FP16 at 128×128 resolution).</li>
+                          <li>Benchmarked across multiple input resolutions (64×64 to 256×256) and hardware targets (CPU, CUDA, TensorRT).</li>
+                          <li>Reduced memory bottlenecks by <b>up to 42%</b> via optimized operator execution, resolution scaling, and frame-wise stream processing.</li>
+                          <li>Logged frame-by-frame inference latency and memory usage to structured <code>.txt</code> reports for system-level evaluation and reproducibility.</li>
                         </ul>
-                        <h5>Tools & Technologies</h5>
-                        <div class="tools-filter-bar">
-                           <button class="tool-filter active" data-filter="all">All</button>
-                           <button class="tool-filter" data-filter="Deep Learning">Deep Learning</button>
-                           <button class="tool-filter" data-filter="Real-time">Real-time</button>
-                           <button class="tool-filter" data-filter="Optimization">Optimization</button>
-                           <button class="tool-filter" data-filter="Streamlit">Streamlit</button>
-                        </div>
-                        <div class="tools-badges-list">
-                           <span class="tool-badge" data-category="Deep Learning">PyTorch</span>
-                           <span class="tool-badge" data-category="Deep Learning">NumPy</span>
-                           <span class="tool-badge" data-category="Deep Learning">U-Net</span>
-                           <span class="tool-badge" data-category="Real-time">Streamlit</span>
-                           <span class="tool-badge" data-category="Optimization">ONNX Runtime</span>
-                           <span class="tool-badge" data-category="Optimization">TensorRT</span>
-                           <span class="tool-badge" data-category="Optimization">Performance Profiling</span>
-                        </div>
-                        <div class="tools-filter-bar">
-                           <button class="tool-filter active" data-filter="all">All</button>
-                           <button class="tool-filter" data-filter="Deep Learning">Deep Learning</button>
-                           <button class="tool-filter" data-filter="Real-time">Real-time</button>
-                           <button class="tool-filter" data-filter="Optimization">Optimization</button>
-                           <button class="tool-filter" data-filter="Streamlit">Streamlit</button>
-                        </div>
-                        <div class="tools-badges-list">
-                           <span class="tool-badge" data-category="Deep Learning">PyTorch</span>
-                           <span class="tool-badge" data-category="Deep Learning">NumPy</span>
-                           <span class="tool-badge" data-category="Deep Learning">U-Net</span>
-                           <span class="tool-badge" data-category="Real-time">Streamlit</span>
-                           <span class="tool-badge" data-category="Optimization">ONNX Runtime</span>
-                           <span class="tool-badge" data-category="Optimization">TensorRT</span>
-                           <span class="tool-badge" data-category="Optimization">Performance Profiling</span>
-                        </div>
                         <h5>Workflow</h5>
                         <img src="./assets/images/wildfire/workflow.png" alt="Workflow" class="media-image">
-                        <img src="./assets/images/wildfire/workflow.png" alt="Workflow" class="media-image">
                         <h5>Output / Result</h5>
-                        <p>Achieved 5.10 ms/frame with TensorRT FP16 at 128×128 resolution.</p>
+                        <p>Achieved 5.10 ms/frame with TensorRT FP16 at 128×128 resolution. See Streamlit dashboard for real-time monitoring and visualization.</p>
                      </div>
                   </div>
                   <!-- Robotic Arm Path Planning -->
@@ -1692,54 +1724,86 @@
                      </a>
                      <h4 class="proj-projects-title" data-project-title>Edge-to-Cloud Wildfire Detection System</h4>
                      <div class="proj-details">
-                        <p>This project implements a real-time wildfire detection pipeline optimized for edge-to-cloud deployment using satellite imagery from the CEMS Wildfire Dataset. The system uses a U-Net model for semantic segmentation, trained and evaluated on preprocessed Sentinel-2 images.
-
-                           With a focus on scalable inference, this solution incorporates distributed model training, ONNX Runtime deployment, performance profiling, and a Streamlit dashboard. It simulates edge-based image streaming to evaluate latency and memory usage — making it a strong demonstration of system-level thinking for AI deployment at scale.</p>
+                        <p>This project implements a real-time wildfire detection pipeline optimized for edge-to-cloud deployment, leveraging Sentinel-2 satellite imagery from the CEMS Wildfire Dataset. The system uses a custom U-Net model for semantic segmentation, trained and evaluated on preprocessed satellite images. The pipeline is designed for scalable inference, distributed training, ONNX Runtime deployment, and performance profiling, with simulation of edge-based image streaming to evaluate latency and memory usage.</p>
                         <h5>Key Features</h5>
+                        <div class="features-accordion">
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Dataset Integration & Preprocessing <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Data Source:</b> Uses open-source Sentinel-2 satellite imagery from the <a href="https://emergency.copernicus.eu/mapping/list-of-components/EMSR" target="_blank">CEMS Wildfire Dataset</a>.</li>
+                                <li><b>Preprocessing Pipeline:</b> Converts raw GeoTIFF data into normalized, resized NumPy arrays with binary masks. Reads multi-band satellite images using <code>rasterio</code>. Resizes and normalizes images with <code>opencv-python</code> and <code>numpy</code>. Splits data into train/validation/test sets using <code>scikit-learn</code>. Stores processed data as <code>.npy</code> files for efficient loading.</li>
+                                <li><b>Script:</b> <code>data/preprocess.py</code> — Handles all preprocessing steps, including directory management and mask binarization.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Semantic Segmentation Model <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Architecture:</b> Implements a U-Net model in <code>models/unet.py</code> for pixel-level wildfire region detection, with encoder, bottleneck, decoder, and skip connections.</li>
+                                <li><b>Framework:</b> Built with <code>torch</code> and <code>torch.nn</code> modules.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Distributed Training <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Distributed Data Parallel (DDP):</b> Utilizes PyTorch's DDP for multi-GPU training, enabling scalable model training across multiple devices. Data loading is distributed using <code>torch.utils.data.DistributedSampler</code>.</li>
+                                <li><b>Loss & Optimization:</b> Uses binary cross-entropy loss (<code>torch.nn.BCELoss</code>) and Adam optimizer.</li>
+                                <li><b>Script:</b> <code>models/train_ddp.py</code></li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Model Export & Inference Acceleration <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>ONNX Export:</b> Converts trained PyTorch models to ONNX format for framework-agnostic, accelerated inference. Export script: <code>models/export_onnx.py</code>.</li>
+                                <li><b>ONNX Runtime Inference:</b> Runs inference using ONNX models with <code>onnxruntime</code> for high-throughput, low-latency deployment. Supports hardware-accelerated backends (CPU, CUDA, TensorRT).</li>
+                                <li><b>Input Preprocessing:</b> Images are resized, normalized, and converted to the appropriate tensor format before inference.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Performance Profiling & Benchmarking <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Profiling Utilities:</b> <code>utils/profiler.py</code> provides function-level profiling using Python's <code>cProfile</code> and <code>pstats</code>, and deep profiling of PyTorch models using <code>torch.profiler</code>.</li>
+                                <li><b>Benchmarking:</b> Logs inference latency and memory usage per frame, with summary metrics. Benchmarks across multiple input resolutions and hardware targets. Structured <code>.txt</code> reports for reproducibility and system-level evaluation.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Edge Simulation & System Evaluation <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Stream Simulator:</b> Simulates real-time image streaming from edge devices, enabling frame-by-frame inference and system evaluation. Evaluates trade-offs in latency and memory usage for different resolutions and hardware.</li>
+                                <li><b>Edge Logs:</b> Inference logs in <code>edge/</code> directory document performance across various hardware and input sizes.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Visualization & Dashboard <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Streamlit Dashboard:</b> Interactive web dashboard for monitoring, visualization, and demonstration. Built with <code>streamlit</code>, <code>matplotlib</code>, and <code>pillow</code>. Enables real-time display of inference results, performance metrics, and system status.</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <h5>Performance Highlights</h5>
                         <ul class="steps-list">
-                           <li>> Semantic Segmentation with U-Net</li>
-                           <li>> Real-time streaming inference</li>
-                           <li>> ONNX + TensorRT Optimization</li>
-                           <li>> Performance profiling</li>
+                          <li>Achieved a <b>3.2× speedup in inference throughput</b> (from 28.01 ms/frame on CPU to 8.74 ms/frame on GPU TensorRT, and 5.10 ms/frame with TensorRT FP16 at 128×128 resolution).</li>
+                          <li>Benchmarked across multiple input resolutions (64×64 to 256×256) and hardware targets (CPU, CUDA, TensorRT).</li>
+                          <li>Reduced memory bottlenecks by <b>up to 42%</b> via optimized operator execution, resolution scaling, and frame-wise stream processing.</li>
+                          <li>Logged frame-by-frame inference latency and memory usage to structured <code>.txt</code> reports for system-level evaluation and reproducibility.</li>
                         </ul>
-                        <h5>Tools & Technologies</h5>
-                        <div class="tools-filter-bar">
-                           <button class="tool-filter active" data-filter="all">All</button>
-                           <button class="tool-filter" data-filter="Deep Learning">Deep Learning</button>
-                           <button class="tool-filter" data-filter="Real-time">Real-time</button>
-                           <button class="tool-filter" data-filter="Optimization">Optimization</button>
-                           <button class="tool-filter" data-filter="Streamlit">Streamlit</button>
-                        </div>
-                        <div class="tools-badges-list">
-                           <span class="tool-badge" data-category="Deep Learning">PyTorch</span>
-                           <span class="tool-badge" data-category="Deep Learning">NumPy</span>
-                           <span class="tool-badge" data-category="Deep Learning">U-Net</span>
-                           <span class="tool-badge" data-category="Real-time">Streamlit</span>
-                           <span class="tool-badge" data-category="Optimization">ONNX Runtime</span>
-                           <span class="tool-badge" data-category="Optimization">TensorRT</span>
-                           <span class="tool-badge" data-category="Optimization">Performance Profiling</span>
-                        </div>
-                        <div class="tools-filter-bar">
-                           <button class="tool-filter active" data-filter="all">All</button>
-                           <button class="tool-filter" data-filter="Deep Learning">Deep Learning</button>
-                           <button class="tool-filter" data-filter="Real-time">Real-time</button>
-                           <button class="tool-filter" data-filter="Optimization">Optimization</button>
-                           <button class="tool-filter" data-filter="Streamlit">Streamlit</button>
-                        </div>
-                        <div class="tools-badges-list">
-                           <span class="tool-badge" data-category="Deep Learning">PyTorch</span>
-                           <span class="tool-badge" data-category="Deep Learning">NumPy</span>
-                           <span class="tool-badge" data-category="Deep Learning">U-Net</span>
-                           <span class="tool-badge" data-category="Real-time">Streamlit</span>
-                           <span class="tool-badge" data-category="Optimization">ONNX Runtime</span>
-                           <span class="tool-badge" data-category="Optimization">TensorRT</span>
-                           <span class="tool-badge" data-category="Optimization">Performance Profiling</span>
-                        </div>
                         <h5>Workflow</h5>
                         <img src="./assets/images/wildfire/workflow.png" alt="Workflow" class="media-image">
-                        <img src="./assets/images/wildfire/workflow.png" alt="Workflow" class="media-image">
                         <h5>Output / Result</h5>
-                        <p>Achieved 5.10 ms/frame with TensorRT FP16 at 128×128 resolution.</p>
+                        <p>Achieved 5.10 ms/frame with TensorRT FP16 at 128×128 resolution. See Streamlit dashboard for real-time monitoring and visualization.</p>
                      </div>
                   </div>
                </section>
