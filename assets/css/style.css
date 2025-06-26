@@ -1948,3 +1948,23 @@ body {
   border-radius: 3px;
 }
 
+.ai-bar .section-title,
+.web-bar .section-title,
+.other-bar .section-title {
+  font-size: var(--fs-4);
+  font-weight: var(--fw-600);
+  color: var(--white-2);
+  padding-left: 16px;
+  border-left: 6px solid var(--orange-yellow-crayola);
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  margin-bottom: 0.5em;
+}
+
+/* Remove underline for these section titles */
+.ai-bar .section-title::after,
+.web-bar .section-title::after,
+.other-bar .section-title::after {
+  display: none;
+}
+

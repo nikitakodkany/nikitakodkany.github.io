@@ -303,8 +303,8 @@
                </header>
                <section class="proj-projects-grid">
                   <!-- Artificial Intelligence/Machine Learning Section -->
-                  <div class="section-header">
-                     <h3 class="section-title">Artificial Intelligence/Machine Learning</h3>
+                  <div class="section-header ai-bar">
+                     <h3 class="section-title">Artificial Intelligence</h3>
                   </div>
                   
                   <!-- Dunes of Influence Project -->
@@ -1389,7 +1389,7 @@
                      </div>
                   </div>
                   <!-- Web Technologies Section -->
-                  <div class="section-header">
+                  <div class="section-header web-bar">
                      <h3 class="section-title">Web Technologies</h3>
                   </div>
                   
@@ -1543,7 +1543,7 @@
                      </div>
                   </div>
                   <!-- Others Section -->
-                  <div class="section-header">
+                  <div class="section-header other-bar">
                      <h3 class="section-title">Others</h3>
                   </div>
                   
@@ -1555,7 +1555,134 @@
                      <h4 class="proj-projects-title" data-project-title>Robotic Arm Path Planning</h4>
                      <div class="proj-details">
                         <p>A reinforcement learning-based path planning system for a 2-DOF robotic arm that learns to reach target positions in 3D space using PyBullet physics simulation and Stable-Baselines3.</p>
-                        <!-- ...rest of Robotic Arm Path Planning project details... -->
+                        <h5>Key Features</h5>
+                        <div class="features-accordion">
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Robotic Arm Environment <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>2-DOF (Degrees of Freedom):</b> Two revolute joints for planar motion</li>
+                                <li><b>Realistic physics:</b> Mass, inertia, damping, and friction modeling</li>
+                                <li><b>Joint limits:</b> Configurable position and velocity constraints</li>
+                                <li><b>End-effector tracking:</b> Real-time position monitoring</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Reinforcement Learning Environment <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>Continuous action space:</b> 2-dimensional actions for joint control</li>
+                                <li><b>Rich observation space:</b> 10-dimensional state vector including joint positions/velocities, target coordinates, and end-effector position</li>
+                                <li><b>Reward shaping:</b> Multi-component reward function with distance-based penalties, progress rewards, success bonuses, and joint limit violations</li>
+                                <li><b>Early termination:</b> For invalid states and boundary conditions</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Training System <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>PPO Algorithm:</b> Advanced policy optimization with configurable hyperparameters (learning rate: 3e-4, steps per update: 1024, batch size: 64)</li>
+                                <li><b>Neural network architecture:</b> [128, 128] MLP for policy and value networks</li>
+                                <li><b>Model persistence:</b> Save/load trained models with automatic checkpointing</li>
+                                <li><b>Training monitoring:</b> Real-time progress tracking and performance metrics</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Evaluation & Visualization <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>GUI visualization:</b> Real-time 3D rendering with PyBullet GUI</li>
+                                <li><b>Performance metrics:</b> Success rate, average distance, motion smoothness</li>
+                                <li><b>Episode analysis:</b> Detailed per-episode statistics and trajectory visualization</li>
+                                <li><b>Camera controls:</b> Configurable viewing angles and distances for analysis</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="accordion-group">
+                            <button class="accordion-header" type="button">Inverse Kinematics (IK) <span class="chevron">▼</span></button>
+                            <div class="accordion-panel">
+                              <ul>
+                                <li><b>C++ implementation:</b> High-performance IK solver for real-time execution</li>
+                                <li><b>Target reaching:</b> Automatic joint angle calculation for desired end-effector positions</li>
+                                <li><b>Distance optimization:</b> Minimize end-effector to target distance with fast convergence</li>
+                                <li><b>Cross-language integration:</b> Python-C++ communication via subprocess for optimal performance</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <h5>Tools & Technologies</h5>
+                        <div class="tools-filter-bar">
+                           <button class="tool-filter active" data-filter="all">All</button>
+                           <button class="tool-filter" data-filter="Physics Simulation">Physics Simulation</button>
+                           <button class="tool-filter" data-filter="Machine Learning">Machine Learning</button>
+                           <button class="tool-filter" data-filter="Programming">Programming</button>
+                           <button class="tool-filter" data-filter="Development Tools">Development Tools</button>
+                           <button class="tool-filter" data-filter="Robotics">Robotics</button>
+                        </div>
+                        <div class="tools-badges-list">
+                           <span class="tool-badge" data-category="Physics Simulation">PyBullet</span>
+                           <span class="tool-badge" data-category="Robotics">URDF</span>
+                           <span class="tool-badge" data-category="Physics Simulation">Real-time Physics</span>
+                           <span class="tool-badge" data-category="Machine Learning">Stable-Baselines3</span>
+                           <span class="tool-badge" data-category="Machine Learning">PPO</span>
+                           <span class="tool-badge" data-category="Machine Learning">PyTorch</span>
+                           <span class="tool-badge" data-category="Machine Learning">Gymnasium</span>
+                           <span class="tool-badge" data-category="Programming">Python</span>
+                           <span class="tool-badge" data-category="Programming">C++</span>
+                           <span class="tool-badge" data-category="Programming">Subprocess</span>
+                           <span class="tool-badge" data-category="Development Tools">NumPy</span>
+                           <span class="tool-badge" data-category="Development Tools">Matplotlib</span>
+                           <span class="tool-badge" data-category="Robotics">2-DOF Arm</span>
+                           <span class="tool-badge" data-category="Robotics">Inverse Kinematics</span>
+                           <span class="tool-badge" data-category="Robotics">Joint Control</span>
+                           <span class="tool-badge" data-category="Machine Learning">Reinforcement Learning</span>
+                           <span class="tool-badge" data-category="Machine Learning">Neural Networks</span>
+                           <span class="tool-badge" data-category="Physics Simulation">Collision Detection</span>
+                           <span class="tool-badge" data-category="Physics Simulation">Gravity Modeling</span>
+                           <span class="tool-badge" data-category="Development Tools">3D Visualization</span>
+                           <span class="tool-badge" data-category="Development Tools">Performance Metrics</span>
+                        </div>
+                        <h5>Workflow</h5>
+                        <div class="workflow-diagram vertical">
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Environment Setup & Training</div>
+                            <div class="workflow-step">
+                              <div class="step-number">1</div>
+                              <div class="step-content">Initialize 2-DOF robotic arm environment with PyBullet physics simulation</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">Configure RL environment with continuous action space and 10D observation space</div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">Train PPO agent with reward shaping for target reaching and joint limit compliance</div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-group">
+                            <div class="workflow-heading">Path Planning & Execution</div>
+                            <div class="workflow-step">
+                              <div class="step-number">4</div>
+                              <div class="step-content">Agent receives target position and current joint states as observations</div>
+                            </div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">PPO policy generates joint actions to minimize end-effector to target distance</div>
+                          </div>
+                          <div class="workflow-arrow">↓</div>
+                          <div class="workflow-step">
+                            <div class="step-number">6</div>
+                            <div class="step-content">Real-time 3D visualization shows arm movement and performance metrics</div>
+                          </div>
+                        </div>
                      </div>
                   </div>
                   <!-- Edge-to-Cloud Wildfire Detection System -->
@@ -1565,8 +1692,54 @@
                      </a>
                      <h4 class="proj-projects-title" data-project-title>Edge-to-Cloud Wildfire Detection System</h4>
                      <div class="proj-details">
-                        <p>This project implements a real-time wildfire detection pipeline optimized for edge-to-cloud deployment using satellite imagery from the CEMS Wildfire Dataset. The system uses a U-Net model for semantic segmentation, trained and evaluated on preprocessed Sentinel-2 images.</p>
-                        <!-- ...rest of Edge-to-Cloud Wildfire Detection System project details... -->
+                        <p>This project implements a real-time wildfire detection pipeline optimized for edge-to-cloud deployment using satellite imagery from the CEMS Wildfire Dataset. The system uses a U-Net model for semantic segmentation, trained and evaluated on preprocessed Sentinel-2 images.
+
+                           With a focus on scalable inference, this solution incorporates distributed model training, ONNX Runtime deployment, performance profiling, and a Streamlit dashboard. It simulates edge-based image streaming to evaluate latency and memory usage — making it a strong demonstration of system-level thinking for AI deployment at scale.</p>
+                        <h5>Key Features</h5>
+                        <ul class="steps-list">
+                           <li>> Semantic Segmentation with U-Net</li>
+                           <li>> Real-time streaming inference</li>
+                           <li>> ONNX + TensorRT Optimization</li>
+                           <li>> Performance profiling</li>
+                        </ul>
+                        <h5>Tools & Technologies</h5>
+                        <div class="tools-filter-bar">
+                           <button class="tool-filter active" data-filter="all">All</button>
+                           <button class="tool-filter" data-filter="Deep Learning">Deep Learning</button>
+                           <button class="tool-filter" data-filter="Real-time">Real-time</button>
+                           <button class="tool-filter" data-filter="Optimization">Optimization</button>
+                           <button class="tool-filter" data-filter="Streamlit">Streamlit</button>
+                        </div>
+                        <div class="tools-badges-list">
+                           <span class="tool-badge" data-category="Deep Learning">PyTorch</span>
+                           <span class="tool-badge" data-category="Deep Learning">NumPy</span>
+                           <span class="tool-badge" data-category="Deep Learning">U-Net</span>
+                           <span class="tool-badge" data-category="Real-time">Streamlit</span>
+                           <span class="tool-badge" data-category="Optimization">ONNX Runtime</span>
+                           <span class="tool-badge" data-category="Optimization">TensorRT</span>
+                           <span class="tool-badge" data-category="Optimization">Performance Profiling</span>
+                        </div>
+                        <div class="tools-filter-bar">
+                           <button class="tool-filter active" data-filter="all">All</button>
+                           <button class="tool-filter" data-filter="Deep Learning">Deep Learning</button>
+                           <button class="tool-filter" data-filter="Real-time">Real-time</button>
+                           <button class="tool-filter" data-filter="Optimization">Optimization</button>
+                           <button class="tool-filter" data-filter="Streamlit">Streamlit</button>
+                        </div>
+                        <div class="tools-badges-list">
+                           <span class="tool-badge" data-category="Deep Learning">PyTorch</span>
+                           <span class="tool-badge" data-category="Deep Learning">NumPy</span>
+                           <span class="tool-badge" data-category="Deep Learning">U-Net</span>
+                           <span class="tool-badge" data-category="Real-time">Streamlit</span>
+                           <span class="tool-badge" data-category="Optimization">ONNX Runtime</span>
+                           <span class="tool-badge" data-category="Optimization">TensorRT</span>
+                           <span class="tool-badge" data-category="Optimization">Performance Profiling</span>
+                        </div>
+                        <h5>Workflow</h5>
+                        <img src="./assets/images/wildfire/workflow.png" alt="Workflow" class="media-image">
+                        <img src="./assets/images/wildfire/workflow.png" alt="Workflow" class="media-image">
+                        <h5>Output / Result</h5>
+                        <p>Achieved 5.10 ms/frame with TensorRT FP16 at 128×128 resolution.</p>
                      </div>
                   </div>
                </section>
